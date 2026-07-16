@@ -1,0 +1,995 @@
+- generic [active] [ref=f11e1]:
+  - generic:
+    - generic:
+      - link "Bỏ qua để đến phần nội dung chính" [ref=f11e2] [cursor=pointer]
+      - link "Tắt chế độ cuộn liên tục" [ref=f11e3] [cursor=pointer]:
+        - /url: "#"
+      - link "Hỗ trợ truy cập" [ref=f11e4] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=vi
+  - generic [ref=f11e9]:
+    - search [ref=f11e10]:
+      - generic [ref=f11e13]:
+        - link "Truy cập trang chủ Google" [ref=f11e14] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=vi&ictx=0&sa=X&ved=0ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQpYkNCAs
+          - img "Truy cập trang chủ Google" [ref=f11e15]
+        - generic [ref=f11e20]:
+          - combobox "Tìm kiếm" [ref=f11e23]: deepseek chat interface screenshot deepseek chat interface screenshot
+          - generic [ref=f11e24]:
+            - button "Xóa" [ref=f11e26] [cursor=pointer]:
+              - img [ref=f11e28]
+            - generic [ref=f11e31]:
+              - button "Công cụ nhập" [ref=f11e32] [cursor=pointer]:
+                - img [ref=f11e34]
+              - button "Tìm kiếm bằng giọng nói" [ref=f11e36] [cursor=pointer]:
+                - img [ref=f11e37]
+              - button "Tìm kiếm bằng hình ảnh" [ref=f11e39] [cursor=pointer]:
+                - img [ref=f11e40]
+        - button "Tìm kiếm" [ref=f11e42] [cursor=pointer]:
+          - img [ref=f11e45]
+    - generic [ref=f11e47]:
+      - button "Cài đặt" [ref=f11e49] [cursor=pointer]:
+        - img [ref=f11e52]
+      - generic [ref=f11e55]:
+        - button "Các ứng dụng của Google" [ref=f11e57] [cursor=pointer]:
+          - img [ref=f11e58]
+        - link "Đăng nhập" [ref=f11e62] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=vi&passive=true&continue=https://www.google.com/search%3Fq%3Ddeepseek%2Bchat%2Binterface%2Bscreenshot%26udm%3D2%26sei%3DR2lLarCNPKKSseMPgNu3yQQ&ec=futura_srp_og_si_72236_p
+  - generic [ref=f11e64]:
+    - navigation [ref=f11e69]:
+      - generic [ref=f11e70]:
+        - list [ref=f11e71]:
+          - listitem [ref=f11e72]:
+            - link "Chế độ AI" [ref=f11e75] [cursor=pointer]:
+              - /url: /search?q=deepseek+chat+interface+screenshot&sca_esv=3926efc4ae7c8dc3&udm=50&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmFvkPtA3ltX7rmDdZXZ4tOTCkQ9mtsuPzXCXD8Y4JWIuFvQgPNJbEaw3DVduTj9lHmsgi1h7Vp-hU_j6XWtVGmqRUU01jWMe9o9x9CVxu2UGtyrDjHQeha6eJa9ceDaqL7UbnvSryf7pg-Fhm1uwDp7hBrJho13yDXgRbYfzriBIJVXM-DtD3q6i-Eo-fBNt-hFsne&aep=1&ntc=1&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQ2J8OegQIChAD
+              - generic [ref=f11e78]: Chế độ AI
+          - listitem [ref=f11e79]:
+            - link "Tất cả" [ref=f11e80] [cursor=pointer]:
+              - /url: /search?sca_esv=3926efc4ae7c8dc3&q=deepseek+chat+interface+screenshot&source=lnms&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmFvkPtA3ltX7rmDdZXZ4tOTCkQ9mtsuPzXCXD8Y4JWIuFvQgPNJbEaw3DVduTj9lHmsgi1h7Vp-hU_j6XWtVGmqRUU01jWMe9o9x9CVxu2UGtyrDjHQeha6eJa9ceDaqL7UbnvSryf7pg-Fhm1uwDp7hBrJho13yDXgRbYfzriBIJVXM-DtD3q6i-Eo-fBNt-hFsne&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQ0pQJegQIDxAB
+              - generic [ref=f11e82]: Tất cả
+          - listitem [ref=f11e83]:
+            - link "Hình ảnh" [disabled] [ref=f11e84]:
+              - generic [ref=f11e86]: Hình ảnh
+          - listitem [ref=f11e87]:
+            - link "Video ngắn" [ref=f11e88] [cursor=pointer]:
+              - /url: /search?sca_esv=3926efc4ae7c8dc3&udm=39&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmFvkPtA3ltX7rmDdZXZ4tOTCkQ9mtsuPzXCXD8Y4JWIuFvQgPNJbEaw3DVduTj9lHmsgi1h7Vp-hU_j6XWtVGmqRUU01jWMe9o9x9CVxu2UGtyrDjHQeha6eJa9ceDaqL7UbnvSryf7pg-Fhm1uwDp7hBrJho13yDXgRbYfzriBIJVXM-DtD3q6i-Eo-fBNt-hFsne&q=deepseek+chat+interface+screenshot&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQs6gLegQIDRAB
+              - generic [ref=f11e90]: Video ngắn
+          - listitem [ref=f11e91]:
+            - link "Chuyến bay" [ref=f11e92] [cursor=pointer]:
+              - /url: /travel/flights?sca_esv=3926efc4ae7c8dc3&output=search&q=deepseek+chat+interface+screenshot&source=lnms&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmFvkPtA3ltX7rmDdZXZ4tOTCkQ9mtsuPzXCXD8Y4JWIuFvQgPNJbEaw3DVduTj9lHmsgi1h7Vp-hU_j6XWtVGmqRUU01jWMe9o9x9CVxu2UGtyrDjHQeha6eJa9ceDaqL7UbnvSryf7pg-Fhm1uwDp7hBrJho13yDXgRbYfzriBIJVXM-DtD3q6i-Eo-fBNt-hFsne&ved=1t:200715&ictx=111
+              - generic [ref=f11e94]: Chuyến bay
+          - listitem [ref=f11e95]:
+            - link "Web" [ref=f11e96] [cursor=pointer]:
+              - /url: /search?sca_esv=3926efc4ae7c8dc3&udm=web&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmFvkPtA3ltX7rmDdZXZ4tOTCkQ9mtsuPzXCXD8Y4JWIuFvQgPNJbEaw3DVduTj9lHmsgi1h7Vp-hU_j6XWtVGmqRUU01jWMe9o9x9CVxu2UGtyrDjHQeha6eJa9ceDaqL7UbnvSryf7pg-Fhm1uwDp7hBrJho13yDXgRbYfzriBIJVXM-DtD3q6i-Eo-fBNt-hFsne&q=deepseek+chat+interface+screenshot&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQs6gLegQIDBAB
+              - generic [ref=f11e98]: Web
+          - listitem [ref=f11e99]:
+            - link "Tài chính" [ref=f11e100] [cursor=pointer]:
+              - /url: /finance?sca_esv=3926efc4ae7c8dc3&output=search&q=deepseek+chat+interface+screenshot&source=lnms&fbs=ABfTbFW4UnGvBVgqDYjq_ksvF_WzL0qSsUjsQCJMDr-_PEHsElEq-XkTNsyVCf0qvOFQ8LmFvkPtA3ltX7rmDdZXZ4tOTCkQ9mtsuPzXCXD8Y4JWIuFvQgPNJbEaw3DVduTj9lHmsgi1h7Vp-hU_j6XWtVGmqRUU01jWMe9o9x9CVxu2UGtyrDjHQeha6eJa9ceDaqL7UbnvSryf7pg-Fhm1uwDp7hBrJho13yDXgRbYfzriBIJVXM-DtD3q6i-Eo-fBNt-hFsne&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQ0pQJegQICxAB
+              - generic [ref=f11e102]: Tài chính
+          - listitem [ref=f11e103]:
+            - button "Các bộ lọc khác" [ref=f11e104] [cursor=pointer]:
+              - generic "Các bộ lọc khác" [ref=f11e105]:
+                - generic [ref=f11e106]:
+                  - generic [ref=f11e107]: Thêm
+                  - img [ref=f11e109]
+        - button "Công cụ" [ref=f11e112] [cursor=pointer]:
+          - generic [ref=f11e114]:
+            - generic [ref=f11e115]: Công cụ
+            - img [ref=f11e117]
+    - navigation [ref=f11e120]:
+      - navigation [ref=f11e123]:
+        - generic [ref=f11e130]:
+          - list [ref=f11e131]:
+            - listitem [ref=f11e132]:
+              - link "Thêm Artificial intelligence" [ref=f11e133] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=artificial+intelligence+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rnLiUJofidH-w32pUWxHOgYWldM55dQ-SaDhR8OjzhwB2TVmXncctTecLMda2zAev0Vg9KlTu0FpwFBNlD8alIOxmfBqO4CYZ8aAZKUrH7kNp1Q7_sXT0dqCZASejDgcz6cKq0yQ71rxG6s9GBhnT-mt3EZy3Z7uereoKRMxpbzLeGCnv1DZ2YHwTJb993GeyctIsig&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAB6BAgREAE&ictx=0
+                - generic [ref=f11e139]: Artificial intelligence
+            - listitem [ref=f11e140]:
+              - link "Thêm Deepseek locally" [ref=f11e141] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=deepseek+locally+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r3rPdI3KT_90l4x48d4lEgH1x4HC2nhFgtLidavZa10rSVe0mnHZsTvKgBF7Fx8e1gWdVa1MMbZp4D3RncO-xotwP2zXPHaN4sPHtXsH_05ZwUOm3dAjWveaVaelLCx83ePlc9d5O1CHyw06sdBWPcJBhQjuMyjD6GQ1SNrqkX8fgKa-r&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAF6BAgVEAE&ictx=0
+                - generic [ref=f11e147]: Deepseek locally
+            - listitem [ref=f11e148]:
+              - link "Thêm Install deepseek" [ref=f11e149] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=install+deepseek+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r3rPdI3KT_90l4x48d4lEgH1x4HC2nhFgtLidavZa10rSVe0mnHZsTvKgBF7Fx8e1MKrwZ3ZI_kZzQ15xu0Ld7v-bQHDPx11ZFpA6sDTe76w26tt7vhguNiPOr2Fk5QlpkjbdneN7Iq6mWG6eafV1SU5eC9sO0t-mzQDlERuo2zDoY_71&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAJ6BAgWEAE&ictx=0
+                - generic [ref=f11e155]: Install deepseek
+            - listitem [ref=f11e156]:
+              - link "Thêm Deploy deepseek" [ref=f11e157] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=deploy+deepseek+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rnz0cfJVzG3l0uEtLclCSjTEgKIRcFGxjG3ysAyvsyZxnrzbzNk8DurfjuEggbIZO95QC20HwRlUqifkEbwK7HoxubQev8NfMtCxjGZRlMww_p_tsJ4koElZhaQ2kcUFzMq2fhn6milC3unhp-xLQIzXJoHdn9Ey8KyDGkbdlz0TvbnpV&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAN6BAgSEAE&ictx=0
+                - generic [ref=f11e163]: Deploy deepseek
+            - listitem [ref=f11e164]:
+              - link "Thêm Ai chatbot" [ref=f11e165] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=ai+chatbot+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r9o8EtIr7w4auRdy15uM4Z2Fpl4_Do1psrHinOeQqjaAFVlASCOyE31yVc_8Fy3BTG0AqU5YuQBqSs93QHthr_9DPKl-GvarboXxyJRl2WtQUHBcSXw7jgQWmF88VfT1UEMwa8-BHa9kdeyXxLyDT1jRB_sg1OZ2rknEuUlkX19GoVmoI&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAR6BAgUEAE&ictx=0
+                - generic [ref=f11e171]: Ai chatbot
+            - listitem [ref=f11e172]:
+              - link "Thêm Deepseek server" [ref=f11e173] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=deepseek+server+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4rnz0cfJVzG3l0uEtLclCSjTEgKIRcFGxjG3ysAyvsyZxnrzbzNk8DurfjuEggbIZOsf1MFj5bQUmpgqRz5XZxcWcKLocHSKtXZ4VgZXJqVFJ3K9rFE0q6_FPsoDbkhK0Bye2BhOsfiOross6oX88_MO4kwGRcqnuJess57CV-8wHX6K2a&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAV6BQjtBRAB&ictx=0
+                - generic [ref=f11e175]: Deepseek server
+            - listitem [ref=f11e176]:
+              - link "Thêm Deepseek coder" [ref=f11e177] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=deepseek+coder+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4ruNQoIX2hVRvWC7VWmS862NspUlvRBltjOn2-sXazovrbgMWhLIMsUyel1qcw47eAtCJ0X81pzjD6L1R_HntD-HBbhD3wFRv-RoFCODl2bPfj8_ezOLvv5Xtoy1CIxsoriLeG6vNt6ikFbtGV9dRzqZFGIePSPQ3OeuKei-AoN7-0OW0m&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAZ6BQjnBRAB&ictx=0
+                - generic [ref=f11e183]: Deepseek coder
+            - listitem [ref=f11e184]:
+              - link "Thêm Coding" [ref=f11e185] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=coding+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r6lclnUuEFz1h_qVdzJ_AdlVlTSNDes4dAIqHKCHQHLGaxut5nx0gQgWJG5auKeM2iXybvSiFUaD7zUBWCmDz7AP95QPyf5lkdukiua6Ck4Ft56PIjPsLBdxX_haV_xGRC80sxYgzT4Wbj8duttc9xPUQhZubnzA7gxfNIC0m1cq8UCHw&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAd6BQjoBRAB&ictx=0
+                - generic [ref=f11e191]: Coding
+            - listitem [ref=f11e192]:
+              - link "Thêm Chrome" [ref=f11e193] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=chrome+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r6lclnUuEFz1h_qVdzJ_AdlVlTSNDes4dAIqHKCHQHLGaxut5nx0gQgWJG5auKeM2kKCrxy0mXt9iJ0mJJyzJAoVFgR8gftWqd7d8RNB2ZWa44eTWzAI_lt1YS-29S3qBM8x55pVHk2fNBJskVLmGqXEMDG7F_NVnksNSdwrKeI9KXTMx&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAh6BQjpBRAB&ictx=0
+                - generic [ref=f11e199]: Chrome
+            - listitem [ref=f11e200]:
+              - link "Thêm Chrome web" [ref=f11e201] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=chrome+web+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r9o8EtIr7w4auRdy15uM4Z2Fpl4_Do1psrHinOeQqjaAFVlASCOyE31yVc_8Fy3BTcNZE9KZxPnzYU1mgHaGcUSafWHcMqSblBdB-T55_0fqSZjLL9KDPTyWtzs4MQ2MDk8CLhLuw1UkUeSnW9z34b20nfRL-UXBf0Nu8xdfepjI8VTmw&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAl6BQjsBRAB&ictx=0
+                - generic [ref=f11e207]: Chrome web
+            - listitem [ref=f11e208]:
+              - link "Thêm Sputnik moment" [ref=f11e209] [cursor=pointer]:
+                - /url: /search?sca_esv=3926efc4ae7c8dc3&q=sputnik+moment+deepseek+chat+interface+screenshot&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4ruNQoIX2hVRvWC7VWmS862NspUlvRBltjOn2-sXazovrbgMWhLIMsUyel1qcw47eAAGtvV90inQLhKfB9stb3FcG5LFAtypSjGBM13TPGrGaqdW5EUDYuVQ3rKnEHdifPL3jYAgDJraI9JEl6Xh1f0hSXmjkbR7ptleUGQucFsKx4VQFM&udm=2&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQxKsJKAp6BQjqBRAB&ictx=0
+                - generic [ref=f11e215]: Sputnik moment
+          - button [ref=f11e216] [cursor=pointer]:
+            - img [ref=f11e217]
+    - heading "Kết quả tìm kiếm" [level=1] [ref=f11e219]
+    - main [ref=f11e221]:
+      - generic [ref=f11e230]:
+        - generic [ref=f11e234] [cursor=pointer]:
+          - button "Chat UI for Deepseek in your local - DEV Community" [ref=f11e239]:
+            - img "Chat UI for Deepseek in your local - DEV Community" [ref=f11e241]
+          - link "Chat UI for Deepseek in your local - DEV Community DEV Community" [ref=f11e243]:
+            - /url: https://dev.to/ductnn/chat-ui-for-deepseek-in-your-local-4pkd
+            - generic [ref=f11e244]:
+              - generic [ref=f11e246]: Chat UI for Deepseek in your local - DEV Community
+              - generic [ref=f11e250]: DEV Community
+        - generic [ref=f11e254] [cursor=pointer]:
+          - button "DeepSeek AI Chat Interface on Dark Screen · Free Stock Photo" [ref=f11e259]:
+            - img "DeepSeek AI Chat Interface on Dark Screen · Free Stock Photo" [ref=f11e261]
+          - link "DeepSeek AI Chat Interface on Dark Screen · Free Stock Photo Pexels" [ref=f11e263]:
+            - /url: https://www.pexels.com/photo/deepseek-ai-chat-interface-on-dark-screen-30530410/
+            - generic [ref=f11e264]:
+              - generic [ref=f11e266]: DeepSeek AI Chat Interface on Dark Screen · Free Stock Photo
+              - generic [ref=f11e270]: Pexels
+        - generic [ref=f11e274] [cursor=pointer]:
+          - button "What is DeepSeek? | TestingDocs" [ref=f11e279]:
+            - img "What is DeepSeek? | TestingDocs" [ref=f11e281]
+          - link "What is DeepSeek? | TestingDocs TestingDocs" [ref=f11e283]:
+            - /url: https://www.testingdocs.com/what-is-deepseek/
+            - generic [ref=f11e284]:
+              - generic [ref=f11e286]: What is DeepSeek? | TestingDocs
+              - generic [ref=f11e290]: TestingDocs
+        - generic [ref=f11e294] [cursor=pointer]:
+          - button "DeepSeek Web UI | Devpost" [ref=f11e299]:
+            - img "DeepSeek Web UI | Devpost" [ref=f11e301]
+          - link "DeepSeek Web UI | Devpost Devpost" [ref=f11e303]:
+            - /url: https://devpost.com/software/deepseek-web-ui
+            - generic [ref=f11e304]:
+              - generic [ref=f11e306]: DeepSeek Web UI | Devpost
+              - generic [ref=f11e310]: Devpost
+        - generic [ref=f11e314] [cursor=pointer]:
+          - button "Chat UI for Deepseek in your local - DEV Community" [ref=f11e319]:
+            - img "Chat UI for Deepseek in your local - DEV Community" [ref=f11e321]
+          - link "Chat UI for Deepseek in your local - DEV Community DEV Community" [ref=f11e323]:
+            - /url: https://dev.to/ductnn/chat-ui-for-deepseek-in-your-local-4pkd
+            - generic [ref=f11e324]:
+              - generic [ref=f11e326]: Chat UI for Deepseek in your local - DEV Community
+              - generic [ref=f11e330]: DEV Community
+        - generic [ref=f11e334] [cursor=pointer]:
+          - generic [ref=f11e336]:
+            - button "Deepseek Ai Chat Bot Interface Seen Stock Photo 2576961827 | Shutterstock" [ref=f11e339]:
+              - img "Deepseek Ai Chat Bot Interface Seen Stock Photo 2576961827 | Shutterstock" [ref=f11e341]
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic: Có thể cấp phép
+          - link "Deepseek Ai Chat Bot Interface Seen Stock Photo 2576961827 | Shutterstock Shutterstock" [ref=f11e343]:
+            - /url: https://www.shutterstock.com/image-photo/deepseek-ai-chat-bot-interface-seen-2576961827
+            - generic [ref=f11e344]:
+              - generic [ref=f11e346]: Deepseek Ai Chat Bot Interface Seen Stock Photo 2576961827 | Shutterstock
+              - generic [ref=f11e350]: Shutterstock
+        - generic [ref=f11e354] [cursor=pointer]:
+          - generic [ref=f11e356]:
+            - button "Close-Up of DeepSeek AI Chat App on Smartphone · Free Stock Photo" [ref=f11e359]:
+              - img "Close-Up of DeepSeek AI Chat App on Smartphone · Free Stock Photo" [ref=f11e361]
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic: Có thể cấp phép
+          - link "Close-Up of DeepSeek AI Chat App on Smartphone · Free Stock Photo Pexels" [ref=f11e363]:
+            - /url: https://www.pexels.com/photo/close-up-of-deepseek-ai-chat-app-on-smartphone-31466992/
+            - generic [ref=f11e364]:
+              - generic [ref=f11e366]: Close-Up of DeepSeek AI Chat App on Smartphone · Free Stock Photo
+              - generic [ref=f11e370]: Pexels
+        - generic [ref=f11e374] [cursor=pointer]:
+          - button "How to use DeepSeek" [ref=f11e379]:
+            - img "How to use DeepSeek" [ref=f11e381]
+          - link "How to use DeepSeek Pocket-lint" [ref=f11e383]:
+            - /url: https://www.pocket-lint.com/deepseek-ai-guide/
+            - generic [ref=f11e384]:
+              - generic [ref=f11e386]: How to use DeepSeek
+              - generic [ref=f11e390]: Pocket-lint
+        - generic [ref=f11e394] [cursor=pointer]:
+          - button "What Is DeepSeek? China Shocks AI Industry With 'Sputnik Moment'" [ref=f11e399]:
+            - img "What Is DeepSeek? China Shocks AI Industry With 'Sputnik Moment'" [ref=f11e401]
+          - link "What Is DeepSeek? China Shocks AI Industry With 'Sputnik Moment' PCMag Australia" [ref=f11e403]:
+            - /url: https://au.pcmag.com/ai/109456/what-is-deepseek-china-shocks-ai-industry-with-sputnik-moment
+            - generic [ref=f11e404]:
+              - generic [ref=f11e406]: What Is DeepSeek? China Shocks AI Industry With 'Sputnik Moment'
+              - generic [ref=f11e410]: PCMag Australia
+        - generic [ref=f11e414] [cursor=pointer]:
+          - button "Deepseek Widescreen Mode - Chrome Web Store" [ref=f11e419]:
+            - img "Deepseek Widescreen Mode - Chrome Web Store" [ref=f11e421]
+          - link "Deepseek Widescreen Mode - Chrome Web Store Chrome Web Store - Google" [ref=f11e423]:
+            - /url: https://chromewebstore.google.com/detail/deepseek-widescreen-mode/pgdgkinbfjlcijejofdboleldgmjocpg
+            - generic [ref=f11e424]:
+              - generic [ref=f11e426]: Deepseek Widescreen Mode - Chrome Web Store
+              - generic [ref=f11e430]: Chrome Web Store - Google
+        - generic [ref=f11e434] [cursor=pointer]:
+          - button "DeepSeek V3 on OverChat.ai – Advanced AI Model for Intelligent Conversations" [ref=f11e439]:
+            - img "DeepSeek V3 on OverChat.ai – Advanced AI Model for Intelligent Conversations" [ref=f11e441]
+          - link "DeepSeek V3 on OverChat.ai – Advanced AI Model for Intelligent Conversations Overchat AI" [ref=f11e443]:
+            - /url: https://overchat.ai/models/deepseek-v3
+            - generic [ref=f11e444]:
+              - generic [ref=f11e446]: DeepSeek V3 on OverChat.ai – Advanced AI Model for Intelligent Conversations
+              - generic [ref=f11e450]: Overchat AI
+        - generic [ref=f11e454] [cursor=pointer]:
+          - button "What is Deepseek V3? Detailed Guide With Demo." [ref=f11e459]:
+            - img "What is Deepseek V3? Detailed Guide With Demo." [ref=f11e461]
+          - link "What is Deepseek V3? Detailed Guide With Demo. Metaschool" [ref=f11e463]:
+            - /url: https://metaschool.so/articles/deepseek-v3
+            - generic [ref=f11e464]:
+              - generic [ref=f11e466]: What is Deepseek V3? Detailed Guide With Demo.
+              - generic [ref=f11e470]: Metaschool
+        - generic [ref=f11e474] [cursor=pointer]:
+          - button "The DeepSeek Phenomenon Demystified | by Cobus Greyling | Medium" [ref=f11e479]:
+            - img "The DeepSeek Phenomenon Demystified | by Cobus Greyling | Medium" [ref=f11e481]
+          - link "The DeepSeek Phenomenon Demystified | by Cobus Greyling | Medium Cobus Greyling - Medium" [ref=f11e483]:
+            - /url: https://cobusgreyling.medium.com/the-deepseek-phenomenon-demystified-e6c2ea762efc
+            - generic [ref=f11e484]:
+              - generic [ref=f11e486]: The DeepSeek Phenomenon Demystified | by Cobus Greyling | Medium
+              - generic [ref=f11e490]: Cobus Greyling - Medium
+        - generic [ref=f11e494] [cursor=pointer]:
+          - generic [ref=f11e496]:
+            - button "DeepSeek AI interface is seen on the smartphone placed on laptop keyboard. Concept for a new chat bot, competitor to Chat GPT. Stafford, United Kingdo Stock Photo - Alamy" [ref=f11e499]:
+              - img "DeepSeek AI interface is seen on the smartphone placed on laptop keyboard. Concept for a new chat bot, competitor to Chat GPT. Stafford, United Kingdo Stock Photo - Alamy" [ref=f11e501]
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic: Có thể cấp phép
+          - link "DeepSeek AI interface is seen on the smartphone placed on laptop keyboard. Concept for a new chat bot, competitor to Chat GPT. Stafford, United Kingdo Stock Photo - Alamy Alamy" [ref=f11e503]:
+            - /url: https://www.alamy.com/deepseek-ai-interface-is-seen-on-the-smartphone-placed-on-laptop-keyboard-concept-for-a-new-chat-bot-competitor-to-chat-gpt-stafford-united-kingdo-image642719280.html
+            - generic [ref=f11e504]:
+              - generic [ref=f11e506]: DeepSeek AI interface is seen on the smartphone placed on laptop keyboard. Concept for a new chat bot, competitor to Chat GPT. Stafford, United Kingdo Stock Photo - Alamy
+              - generic [ref=f11e510]: Alamy
+        - generic [ref=f11e514] [cursor=pointer]:
+          - 'button "Setting Up DeepSeek on a Local or Private Server: A Step-by-Step Tutorial – Nodus Labs: Ecological Thinking through Network Analysis" [ref=f11e519]':
+            - 'img "Setting Up DeepSeek on a Local or Private Server: A Step-by-Step Tutorial – Nodus Labs: Ecological Thinking through Network Analysis" [ref=f11e521]'
+          - 'link "Setting Up DeepSeek on a Local or Private Server: A Step-by-Step Tutorial – Nodus Labs: Ecological Thinking through Network Analysis Nodus Labs" [ref=f11e523]':
+            - /url: https://noduslabs.com/featured/make-deepseek-ai-private/
+            - generic [ref=f11e524]:
+              - generic [ref=f11e526]: "Setting Up DeepSeek on a Local or Private Server: A Step-by-Step Tutorial – Nodus Labs: Ecological Thinking through Network Analysis"
+              - generic [ref=f11e530]: Nodus Labs
+        - generic [ref=f11e534] [cursor=pointer]:
+          - button "Building a Chat App with Deepseek-R1 and Together.ai in Under 5 Minutes | Appsmith Community Portal" [ref=f11e539]:
+            - img "Building a Chat App with Deepseek-R1 and Together.ai in Under 5 Minutes | Appsmith Community Portal" [ref=f11e541]
+          - link "Building a Chat App with Deepseek-R1 and Together.ai in Under 5 Minutes | Appsmith Community Portal the Appsmith Community" [ref=f11e543]:
+            - /url: https://community.appsmith.com/content/guide/building-chat-app-deepseek-r1-and-togetherai-under-5-minutes
+            - generic [ref=f11e544]:
+              - generic [ref=f11e546]: Building a Chat App with Deepseek-R1 and Together.ai in Under 5 Minutes | Appsmith Community Portal
+              - generic [ref=f11e550]: the Appsmith Community
+        - generic [ref=f11e554] [cursor=pointer]:
+          - 'button "GitHub - AnshChoudhary/DeepSeek-VLM-Chat: This project integrates the DeepSeek-VL model with a webcam feed and a Gradio web interface and allows users to ask questions about the captured frame using a text-based chat" [ref=f11e559]':
+            - 'img "GitHub - AnshChoudhary/DeepSeek-VLM-Chat: This project integrates the DeepSeek-VL model with a webcam feed and a Gradio web interface and allows users to ask questions about the captured frame using a text-based chat" [ref=f11e561]'
+          - 'link "GitHub - AnshChoudhary/DeepSeek-VLM-Chat: This project integrates the DeepSeek-VL model with a webcam feed and a Gradio web interface and allows users to ask questions about the captured frame using a text-based chat GitHub" [ref=f11e563]':
+            - /url: https://github.com/AnshChoudhary/DeepSeek-VLM-Chat
+            - generic [ref=f11e564]:
+              - generic [ref=f11e566]: "GitHub - AnshChoudhary/DeepSeek-VLM-Chat: This project integrates the DeepSeek-VL model with a webcam feed and a Gradio web interface and allows users to ask questions about the captured frame using a text-based chat"
+              - generic [ref=f11e570]: GitHub
+        - generic [ref=f11e574] [cursor=pointer]:
+          - button "How to use DeepSeek both privately and securely | Kaspersky official blog" [ref=f11e579]:
+            - img "How to use DeepSeek both privately and securely | Kaspersky official blog" [ref=f11e581]
+          - link "How to use DeepSeek both privately and securely | Kaspersky official blog Kaspersky" [ref=f11e583]:
+            - /url: https://www.kaspersky.co.uk/blog/deepseek-privacy-and-security/29643/
+            - generic [ref=f11e584]:
+              - generic [ref=f11e586]: How to use DeepSeek both privately and securely | Kaspersky official blog
+              - generic [ref=f11e590]: Kaspersky
+        - generic [ref=f11e594] [cursor=pointer]:
+          - button "DeepSeek V3 on OverChat.ai – Advanced AI Model for Intelligent Conversations" [ref=f11e599]:
+            - img "DeepSeek V3 on OverChat.ai – Advanced AI Model for Intelligent Conversations" [ref=f11e601]
+          - link "DeepSeek V3 on OverChat.ai – Advanced AI Model for Intelligent Conversations Overchat AI" [ref=f11e603]:
+            - /url: https://overchat.ai/models/deepseek-v3
+            - generic [ref=f11e604]:
+              - generic [ref=f11e606]: DeepSeek V3 on OverChat.ai – Advanced AI Model for Intelligent Conversations
+              - generic [ref=f11e610]: Overchat AI
+        - generic [ref=f11e614] [cursor=pointer]:
+          - button "Everything you need to know about Deepseek" [ref=f11e619]:
+            - img "Everything you need to know about Deepseek" [ref=f11e621]
+          - link "Everything you need to know about Deepseek Marketing4eCommerce" [ref=f11e623]:
+            - /url: https://marketing4ecommerce.net/en/deepseek-keys-curiosities/
+            - generic [ref=f11e624]:
+              - generic [ref=f11e626]: Everything you need to know about Deepseek
+              - generic [ref=f11e630]: Marketing4eCommerce
+        - generic [ref=f11e634] [cursor=pointer]:
+          - 'button "Analysis: DeepSeek''s AI is giving the world a window into Chinese censorship and information control | CNN" [ref=f11e639]':
+            - 'img "Analysis: DeepSeek''s AI is giving the world a window into Chinese censorship and information control | CNN" [ref=f11e641]'
+          - 'link "Analysis: DeepSeek''s AI is giving the world a window into Chinese censorship and information control | CNN CNN" [ref=f11e643]':
+            - /url: https://www.cnn.com/2025/01/29/china/deepseek-ai-china-censorship-moderation-intl-hnk
+            - generic [ref=f11e644]:
+              - generic [ref=f11e646]: "Analysis: DeepSeek's AI is giving the world a window into Chinese censorship and information control | CNN"
+              - generic [ref=f11e650]: CNN
+        - generic [ref=f11e654] [cursor=pointer]:
+          - 'button "DeepSeek V3 API Believes It Is GPT4... In the Chat Interface It Says It Is DeepSeek : r/OpenAI" [ref=f11e659]':
+            - 'img "DeepSeek V3 API Believes It Is GPT4... In the Chat Interface It Says It Is DeepSeek : r/OpenAI" [ref=f11e661]'
+          - 'link "DeepSeek V3 API Believes It Is GPT4... In the Chat Interface It Says It Is DeepSeek : r/OpenAI Reddit" [ref=f11e663]':
+            - /url: https://www.reddit.com/r/OpenAI/comments/1ibo9u1/deepseek_v3_api_believes_it_is_gpt4_in_the_chat/
+            - generic [ref=f11e664]:
+              - generic [ref=f11e666]: "DeepSeek V3 API Believes It Is GPT4... In the Chat Interface It Says It Is DeepSeek : r/OpenAI"
+              - generic [ref=f11e670]: Reddit
+        - generic [ref=f11e674] [cursor=pointer]:
+          - button "Can DeepSeek Generate Images? The Clear Answer - Chat-Deep.ai" [ref=f11e679]:
+            - img "Can DeepSeek Generate Images? The Clear Answer - Chat-Deep.ai" [ref=f11e681]
+          - link "Can DeepSeek Generate Images? The Clear Answer - Chat-Deep.ai DeepSeek AI" [ref=f11e683]:
+            - /url: https://chat-deep.ai/guide/deepseek-generate-images/
+            - generic [ref=f11e684]:
+              - generic [ref=f11e686]: Can DeepSeek Generate Images? The Clear Answer - Chat-Deep.ai
+              - generic [ref=f11e690]: DeepSeek AI
+        - generic [ref=f11e694] [cursor=pointer]:
+          - button "DeepSeek - Initial Thoughts and Advice. - Artificial intelligence" [ref=f11e699]:
+            - img "DeepSeek - Initial Thoughts and Advice. - Artificial intelligence" [ref=f11e701]
+          - link "DeepSeek - Initial Thoughts and Advice. - Artificial intelligence Artificial intelligence" [ref=f11e703]:
+            - /url: https://nationalcentreforai.jiscinvolve.org/wp/2025/01/28/deepseek-initial-advice/
+            - generic [ref=f11e704]:
+              - generic [ref=f11e706]: DeepSeek - Initial Thoughts and Advice. - Artificial intelligence
+              - generic [ref=f11e710]: Artificial intelligence
+        - generic [ref=f11e712]:
+          - heading "Tìm kiếm có liên quan" [level=2] [ref=f11e713]
+          - link "deepseek chat" [ref=f11e714] [cursor=pointer]:
+            - /url: /search?sca_esv=3926efc4ae7c8dc3&udm=2&q=deepseek+chat&stick=H4sIAAAAAAAAAFvEypuSmlpQnJqarZCckVgCAPvtVWIQAAAA&source=univ&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQrNwCegQIcBAA
+            - generic [ref=f11e719]: deepseek chat
+          - link "deepseek ui" [ref=f11e720] [cursor=pointer]:
+            - /url: /search?sca_esv=3926efc4ae7c8dc3&udm=2&q=deepseek+ui&stick=H4sIAAAAAAAAAFvEyp2SmlpQnJqarVCaCQB3jD8ZDgAAAA&source=univ&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQrNwCegQIfxAA
+            - generic [ref=f11e725]: deepseek ui
+          - link "grok" [ref=f11e726] [cursor=pointer]:
+            - /url: /search?sca_esv=3926efc4ae7c8dc3&udm=2&q=grok&stick=H4sIAAAAAAAAAFvEypJelJ8NAHaWlCEHAAAA&source=univ&sa=X&ved=2ahUKEwjspeX50r2VAxX0T2cHHeDxDmAQrNwCegUImgEQAA
+            - generic [ref=f11e731]: grok
+        - generic [ref=f11e735] [cursor=pointer]:
+          - button "Deepseek Ai Interface Review 2026" [ref=f11e740]:
+            - img "Deepseek Ai Interface Review 2026" [ref=f11e742]
+          - link "Deepseek Ai Interface Review 2026 Instagram" [ref=f11e744]:
+            - /url: https://www.instagram.com/popular/deepseek-ai-interface-review-2026/
+            - generic [ref=f11e745]:
+              - generic [ref=f11e747]: Deepseek Ai Interface Review 2026
+              - generic [ref=f11e751]: Instagram
+        - generic [ref=f11e755] [cursor=pointer]:
+          - button "What is DeepSeek, the AI chatbot from China that is sending shockwaves through the tech world? | Euronews" [ref=f11e760]:
+            - img "What is DeepSeek, the AI chatbot from China that is sending shockwaves through the tech world? | Euronews" [ref=f11e762]
+          - link "What is DeepSeek, the AI chatbot from China that is sending shockwaves through the tech world? | Euronews Euronews.com" [ref=f11e764]:
+            - /url: https://www.euronews.com/next/2025/01/28/what-is-deepseek-the-ai-chatbot-from-china-that-is-sending-shockwaves-through-the-tech-wor
+            - generic [ref=f11e765]:
+              - generic [ref=f11e767]: What is DeepSeek, the AI chatbot from China that is sending shockwaves through the tech world? | Euronews
+              - generic [ref=f11e771]: Euronews.com
+        - generic [ref=f11e775] [cursor=pointer]:
+          - button "Chinese Startup DeepSeek Unveils Impressive New Open Source AI Models" [ref=f11e780]:
+            - img "Chinese Startup DeepSeek Unveils Impressive New Open Source AI Models" [ref=f11e782]
+          - link "Chinese Startup DeepSeek Unveils Impressive New Open Source AI Models Maginative" [ref=f11e784]:
+            - /url: https://www.maginative.com/article/chinese-startup-unveils-impressive-new-ai-chatbot-deepseek/
+            - generic [ref=f11e785]:
+              - generic [ref=f11e787]: Chinese Startup DeepSeek Unveils Impressive New Open Source AI Models
+              - generic [ref=f11e791]: Maginative
+        - generic [ref=f11e795] [cursor=pointer]:
+          - 'button "DeepSeek adds AI vision in major move: ''the whale can now see'' | South China Morning Post" [ref=f11e800]':
+            - 'img "DeepSeek adds AI vision in major move: ''the whale can now see'' | South China Morning Post" [ref=f11e802]'
+          - 'link "DeepSeek adds AI vision in major move: ''the whale can now see'' | South China Morning Post South China Morning Post" [ref=f11e804]':
+            - /url: https://www.scmp.com/tech/tech-trends/article/3351892/whale-can-now-see-deepseek-adds-ai-vision-major-move
+            - generic [ref=f11e805]:
+              - generic [ref=f11e807]: "DeepSeek adds AI vision in major move: 'the whale can now see' | South China Morning Post"
+              - generic [ref=f11e811]: South China Morning Post
+        - generic [ref=f11e815] [cursor=pointer]:
+          - 'button "DeepSeek Local: How to Self-Host DeepSeek (Privacy and Control) | LinuxBlog.io" [ref=f11e820]':
+            - 'img "DeepSeek Local: How to Self-Host DeepSeek (Privacy and Control) | LinuxBlog.io" [ref=f11e822]'
+          - 'link "DeepSeek Local: How to Self-Host DeepSeek (Privacy and Control) | LinuxBlog.io LinuxBlog.io" [ref=f11e824]':
+            - /url: https://linuxblog.io/deepseek-local-self-host/
+            - generic [ref=f11e825]:
+              - generic [ref=f11e827]: "DeepSeek Local: How to Self-Host DeepSeek (Privacy and Control) | LinuxBlog.io"
+              - generic [ref=f11e831]: LinuxBlog.io
+        - generic [ref=f11e835] [cursor=pointer]:
+          - button "DeepSeek AI - Floating AI Chat - Chrome Web Store" [ref=f11e840]:
+            - img "DeepSeek AI - Floating AI Chat - Chrome Web Store" [ref=f11e842]
+          - link "DeepSeek AI - Floating AI Chat - Chrome Web Store Chrome Web Store - Google" [ref=f11e844]:
+            - /url: https://chromewebstore.google.com/detail/deepseek-ai/bjjobdlpgglckcmhgmmecijpfobmcpap
+            - generic [ref=f11e845]:
+              - generic [ref=f11e847]: DeepSeek AI - Floating AI Chat - Chrome Web Store
+              - generic [ref=f11e851]: Chrome Web Store - Google
+        - generic [ref=f11e855] [cursor=pointer]:
+          - 'button "How to Use DeepSeek-TUI for Terminal Coding: Complete Guide (2026) | Tosea.ai" [ref=f11e860]':
+            - 'img "How to Use DeepSeek-TUI for Terminal Coding: Complete Guide (2026) | Tosea.ai" [ref=f11e862]'
+          - 'link "How to Use DeepSeek-TUI for Terminal Coding: Complete Guide (2026) | Tosea.ai Tosea.ai" [ref=f11e864]':
+            - /url: https://tosea.ai/blog/deepseek-tui-terminal-coding-guide-2026
+            - generic [ref=f11e865]:
+              - generic [ref=f11e867]: "How to Use DeepSeek-TUI for Terminal Coding: Complete Guide (2026) | Tosea.ai"
+              - generic [ref=f11e871]: Tosea.ai
+        - generic [ref=f11e875] [cursor=pointer]:
+          - button "Will China's New AI Model DeepSeek Threaten U.S. Dominance?" [ref=f11e880]:
+            - img "Will China's New AI Model DeepSeek Threaten U.S. Dominance?" [ref=f11e882]
+          - link "Will China's New AI Model DeepSeek Threaten U.S. Dominance? Tobias Holm" [ref=f11e884]:
+            - /url: https://www.tobiasholm.com/tech/will-chinas-new-ai-model-deepseek-threaten-us-dominance
+            - generic [ref=f11e885]:
+              - generic [ref=f11e887]: Will China's New AI Model DeepSeek Threaten U.S. Dominance?
+              - generic [ref=f11e891]: Tobias Holm
+        - generic [ref=f11e895] [cursor=pointer]:
+          - button "Chat.Deepseek App Screenshots, UI Screens & Design Inspiration | Uiland" [ref=f11e900]:
+            - img "Chat.Deepseek App Screenshots, UI Screens & Design Inspiration | Uiland" [ref=f11e902]
+          - link "Chat.Deepseek App Screenshots, UI Screens & Design Inspiration | Uiland Uiland" [ref=f11e904]:
+            - /url: https://uiland.design/web/screens/chat.deepseek/screens/8cade060-3128-4a06-8ca3-579bc8a5e1ca
+            - generic [ref=f11e905]:
+              - generic [ref=f11e907]: Chat.Deepseek App Screenshots, UI Screens & Design Inspiration | Uiland
+              - generic [ref=f11e911]: Uiland
+        - generic [ref=f11e915] [cursor=pointer]:
+          - button "How to Use DeepSeek R1 in N8N" [ref=f11e920]:
+            - img "How to Use DeepSeek R1 in N8N" [ref=f11e922]
+          - link "How to Use DeepSeek R1 in N8N Elestio blog" [ref=f11e924]:
+            - /url: https://blog.elest.io/how-to-use-deepseek-r1-in-n8n/
+            - generic [ref=f11e925]:
+              - generic [ref=f11e927]: How to Use DeepSeek R1 in N8N
+              - generic [ref=f11e931]: Elestio blog
+        - generic [ref=f11e935] [cursor=pointer]:
+          - 'button "Like ChatGPT, DeepSeek is free: Here''s how to use it on your smartphone, laptop and PC | Technology News - The Indian Express" [ref=f11e940]':
+            - 'img "Like ChatGPT, DeepSeek is free: Here''s how to use it on your smartphone, laptop and PC | Technology News - The Indian Express" [ref=f11e942]'
+          - 'link "Like ChatGPT, DeepSeek is free: Here''s how to use it on your smartphone, laptop and PC | Technology News - The Indian Express The Indian Express" [ref=f11e944]':
+            - /url: https://indianexpress.com/article/technology/techook/deepseek-how-to-use-for-free-smartphone-laptop-pc-9805383/
+            - generic [ref=f11e945]:
+              - generic [ref=f11e947]: "Like ChatGPT, DeepSeek is free: Here's how to use it on your smartphone, laptop and PC | Technology News - The Indian Express"
+              - generic [ref=f11e951]: The Indian Express
+        - generic [ref=f11e955] [cursor=pointer]:
+          - 'button "DeepSeek: when UI doesn''t matter. Localisation, prompting and a cute… | by Rosie Hoggmascall | UX Collective" [ref=f11e960]':
+            - 'img "DeepSeek: when UI doesn''t matter. Localisation, prompting and a cute… | by Rosie Hoggmascall | UX Collective" [ref=f11e962]'
+          - 'link "DeepSeek: when UI doesn''t matter. Localisation, prompting and a cute… | by Rosie Hoggmascall | UX Collective UX Collective" [ref=f11e964]':
+            - /url: https://uxdesign.cc/deepseek-when-ui-doesnt-matter-77dd635c65a6
+            - generic [ref=f11e965]:
+              - generic [ref=f11e967]: "DeepSeek: when UI doesn't matter. Localisation, prompting and a cute… | by Rosie Hoggmascall | UX Collective"
+              - generic [ref=f11e971]: UX Collective
+        - generic [ref=f11e975] [cursor=pointer]:
+          - button "DeepSeek AI - Floating AI Chat - Chrome Web Store" [ref=f11e980]:
+            - img "DeepSeek AI - Floating AI Chat - Chrome Web Store" [ref=f11e982]
+          - link "DeepSeek AI - Floating AI Chat - Chrome Web Store Chrome Web Store - Google" [ref=f11e984]:
+            - /url: https://chromewebstore.google.com/detail/deepseek-ai/bjjobdlpgglckcmhgmmecijpfobmcpap
+            - generic [ref=f11e985]:
+              - generic [ref=f11e987]: DeepSeek AI - Floating AI Chat - Chrome Web Store
+              - generic [ref=f11e991]: Chrome Web Store - Google
+        - generic [ref=f11e995] [cursor=pointer]:
+          - 'button "DeepSeek vs. ChatGPT: Which is the better AI app for iPhones? - iGeeksBlog" [ref=f11e1000]':
+            - 'img "DeepSeek vs. ChatGPT: Which is the better AI app for iPhones? - iGeeksBlog" [ref=f11e1002]'
+          - 'link "DeepSeek vs. ChatGPT: Which is the better AI app for iPhones? - iGeeksBlog iGeeksBlog" [ref=f11e1004]':
+            - /url: https://www.igeeksblog.com/deepseek-vs-chatgpt-iphone-comparison/
+            - generic [ref=f11e1005]:
+              - generic [ref=f11e1007]: "DeepSeek vs. ChatGPT: Which is the better AI app for iPhones? - iGeeksBlog"
+              - generic [ref=f11e1011]: iGeeksBlog
+        - generic [ref=f11e1015] [cursor=pointer]:
+          - 'button "Voice mode for DeepSeek AI: Talk & listen with voice chat." [ref=f11e1020]':
+            - 'img "Voice mode for DeepSeek AI: Talk & listen with voice chat." [ref=f11e1022]'
+          - 'link "Voice mode for DeepSeek AI: Talk & listen with voice chat. VoiceWave: ChatGPT Voice Control" [ref=f11e1024]':
+            - /url: https://voicewave.xyz/voice-mode-for-deepseek/
+            - generic [ref=f11e1025]:
+              - generic [ref=f11e1027]: "Voice mode for DeepSeek AI: Talk & listen with voice chat."
+              - generic [ref=f11e1031]: "VoiceWave: ChatGPT Voice Control"
+        - generic [ref=f11e1035] [cursor=pointer]:
+          - button "DeepSeek's censorship is a warning shot - and a wake-up call - Digital Trends" [ref=f11e1040]:
+            - img "DeepSeek's censorship is a warning shot - and a wake-up call - Digital Trends" [ref=f11e1042]
+          - link "DeepSeek's censorship is a warning shot - and a wake-up call - Digital Trends Digital Trends" [ref=f11e1044]:
+            - /url: https://www.digitaltrends.com/phones/deepseek-ai-censorship-risks-business-expert-concerns/
+            - generic [ref=f11e1045]:
+              - generic [ref=f11e1047]: DeepSeek's censorship is a warning shot - and a wake-up call - Digital Trends
+              - generic [ref=f11e1051]: Digital Trends
+        - generic [ref=f11e1055] [cursor=pointer]:
+          - 'button "DeepSeek API Docs: Complete Setup, Pricing, Models & Code Examples - Chat -Deep.ai" [ref=f11e1060]':
+            - 'img "DeepSeek API Docs: Complete Setup, Pricing, Models & Code Examples - Chat -Deep.ai" [ref=f11e1062]'
+          - 'link "DeepSeek API Docs: Complete Setup, Pricing, Models & Code Examples - Chat -Deep.ai DeepSeek AI" [ref=f11e1064]':
+            - /url: https://chat-deep.ai/docs/api/
+            - generic [ref=f11e1065]:
+              - generic [ref=f11e1067]: "DeepSeek API Docs: Complete Setup, Pricing, Models & Code Examples - Chat -Deep.ai"
+              - generic [ref=f11e1071]: DeepSeek AI
+        - generic [ref=f11e1075] [cursor=pointer]:
+          - button "Building AI Chat Workflows with FlowiseAI and DeepSeek R1" [ref=f11e1080]:
+            - img "Building AI Chat Workflows with FlowiseAI and DeepSeek R1" [ref=f11e1082]
+          - link "Building AI Chat Workflows with FlowiseAI and DeepSeek R1 Elestio blog" [ref=f11e1084]:
+            - /url: https://blog.elest.io/building-ai-chat-workflows-with-flowiseai-and-deepseek-r1/
+            - generic [ref=f11e1085]:
+              - generic [ref=f11e1087]: Building AI Chat Workflows with FlowiseAI and DeepSeek R1
+              - generic [ref=f11e1091]: Elestio blog
+        - generic [ref=f11e1095] [cursor=pointer]:
+          - button "Screenshots of ChatGPT-4.0, Libre Chat-v0.7.2 interface, DeepSeek-V3.1,... | Download Scientific Diagram" [ref=f11e1100]:
+            - img "Screenshots of ChatGPT-4.0, Libre Chat-v0.7.2 interface, DeepSeek-V3.1,... | Download Scientific Diagram" [ref=f11e1102]
+          - link "Screenshots of ChatGPT-4.0, Libre Chat-v0.7.2 interface, DeepSeek-V3.1,... | Download Scientific Diagram ResearchGate" [ref=f11e1104]:
+            - /url: https://www.researchgate.net/figure/Screenshots-of-ChatGPT-40-Libre-Chat-v072-interface-DeepSeek-V31-and-Metaso_fig1_404037953
+            - generic [ref=f11e1105]:
+              - generic [ref=f11e1107]: Screenshots of ChatGPT-4.0, Libre Chat-v0.7.2 interface, DeepSeek-V3.1,... | Download Scientific Diagram
+              - generic [ref=f11e1111]: ResearchGate
+        - generic [ref=f11e1115] [cursor=pointer]:
+          - button "DeepSeek is Wide Open for Abuse. Here's Why That's a Problem." [ref=f11e1120]:
+            - img "DeepSeek is Wide Open for Abuse. Here's Why That's a Problem." [ref=f11e1122]
+          - link "DeepSeek is Wide Open for Abuse. Here's Why That's a Problem. Ironscales" [ref=f11e1124]:
+            - /url: https://ironscales.com/blog/deepseek-is-wide-open-for-abuse-heres-why-thats-a-problem
+            - generic [ref=f11e1125]:
+              - generic [ref=f11e1127]: DeepSeek is Wide Open for Abuse. Here's Why That's a Problem.
+              - generic [ref=f11e1131]: Ironscales
+        - generic [ref=f11e1135] [cursor=pointer]:
+          - 'button "DeepSeek Desktop v1.0.0 Free: AI Chat Experience on Desktop" [ref=f11e1140]':
+            - 'img "DeepSeek Desktop v1.0.0 Free: AI Chat Experience on Desktop" [ref=f11e1142]'
+          - 'link "DeepSeek Desktop v1.0.0 Free: AI Chat Experience on Desktop Mediaket.net" [ref=f11e1144]':
+            - /url: https://www.mediaket.net/software/scientific-software/deepseek-desktop.html
+            - generic [ref=f11e1145]:
+              - generic [ref=f11e1147]: "DeepSeek Desktop v1.0.0 Free: AI Chat Experience on Desktop"
+              - generic [ref=f11e1151]: Mediaket.net
+        - generic [ref=f11e1155] [cursor=pointer]:
+          - button "How To Access DeepSeek Chat Interface ! Tutorial - YouTube" [ref=f11e1160]:
+            - img "How To Access DeepSeek Chat Interface ! Tutorial - YouTube" [ref=f11e1162]
+          - link "How To Access DeepSeek Chat Interface ! Tutorial - YouTube YouTube" [ref=f11e1164]:
+            - /url: https://www.youtube.com/watch?v=kK2AeU45aJU
+            - generic [ref=f11e1165]:
+              - generic [ref=f11e1167]: How To Access DeepSeek Chat Interface ! Tutorial - YouTube
+              - generic [ref=f11e1171]: YouTube
+        - generic [ref=f11e1175] [cursor=pointer]:
+          - button "Run DeepSeek R1 locally on your device (Beginner-Friendly Guide)" [ref=f11e1180]:
+            - img "Run DeepSeek R1 locally on your device (Beginner-Friendly Guide)" [ref=f11e1182]
+          - link "Run DeepSeek R1 locally on your device (Beginner-Friendly Guide) Jan.ai" [ref=f11e1184]:
+            - /url: https://www.jan.ai/post/deepseek-r1-locally
+            - generic [ref=f11e1185]:
+              - generic [ref=f11e1187]: Run DeepSeek R1 locally on your device (Beginner-Friendly Guide)
+              - generic [ref=f11e1191]: Jan.ai
+        - generic [ref=f11e1195] [cursor=pointer]:
+          - button "DeepSeek App vs ChatGPT App - Which One Rules Over Mobiles?" [ref=f11e1200]:
+            - img "DeepSeek App vs ChatGPT App - Which One Rules Over Mobiles?" [ref=f11e1202]
+          - link "DeepSeek App vs ChatGPT App - Which One Rules Over Mobiles? Analytics Vidhya" [ref=f11e1204]:
+            - /url: https://www.analyticsvidhya.com/blog/2025/01/deepseek-app-vs-chatgpt-app/
+            - generic [ref=f11e1205]:
+              - generic [ref=f11e1207]: DeepSeek App vs ChatGPT App - Which One Rules Over Mobiles?
+              - generic [ref=f11e1211]: Analytics Vidhya
+        - generic [ref=f11e1215] [cursor=pointer]:
+          - button "🔍 Is DeepSeek a Distilled Version of GPT-4? Analyzing Suspicious Behavior - ChatGPT - OpenAI Developer Community" [ref=f11e1220]:
+            - img "🔍 Is DeepSeek a Distilled Version of GPT-4? Analyzing Suspicious Behavior - ChatGPT - OpenAI Developer Community" [ref=f11e1222]
+          - link "🔍 Is DeepSeek a Distilled Version of GPT-4? Analyzing Suspicious Behavior - ChatGPT - OpenAI Developer Community OpenAI Developer Community" [ref=f11e1224]:
+            - /url: https://community.openai.com/t/is-deepseek-a-distilled-version-of-gpt-4-analyzing-suspicious-behavior/1109600
+            - generic [ref=f11e1225]:
+              - generic [ref=f11e1227]: 🔍 Is DeepSeek a Distilled Version of GPT-4? Analyzing Suspicious Behavior - ChatGPT - OpenAI Developer Community
+              - generic [ref=f11e1231]: OpenAI Developer Community
+        - generic [ref=f11e1235] [cursor=pointer]:
+          - 'button "GitHub - TadehB7/deepseek-chat-service: 🚀 A Dockerized chat UI powered by MongoDB, Ollama, and DeepSeek LLM. Easily deploy and run an AI-driven chat service with minimal setup. · GitHub" [ref=f11e1240]':
+            - 'img "GitHub - TadehB7/deepseek-chat-service: 🚀 A Dockerized chat UI powered by MongoDB, Ollama, and DeepSeek LLM. Easily deploy and run an AI-driven chat service with minimal setup. · GitHub" [ref=f11e1242]'
+          - 'link "GitHub - TadehB7/deepseek-chat-service: 🚀 A Dockerized chat UI powered by MongoDB, Ollama, and DeepSeek LLM. Easily deploy and run an AI-driven chat service with minimal setup. · GitHub GitHub" [ref=f11e1244]':
+            - /url: https://github.com/TadehB7/deepseek-chat-service
+            - generic [ref=f11e1245]:
+              - generic [ref=f11e1247]: "GitHub - TadehB7/deepseek-chat-service: 🚀 A Dockerized chat UI powered by MongoDB, Ollama, and DeepSeek LLM. Easily deploy and run an AI-driven chat service with minimal setup. · GitHub"
+              - generic [ref=f11e1251]: GitHub
+        - generic [ref=f11e1255] [cursor=pointer]:
+          - button "How to Use DeepSeek V3 0324 API for Free" [ref=f11e1260]:
+            - img "How to Use DeepSeek V3 0324 API for Free" [ref=f11e1262]
+          - link "How to Use DeepSeek V3 0324 API for Free Apidog" [ref=f11e1264]:
+            - /url: https://apidog.com/blog/how-to-use-deepseek-v3-0324-api-for-free/
+            - generic [ref=f11e1265]:
+              - generic [ref=f11e1267]: How to Use DeepSeek V3 0324 API for Free
+              - generic [ref=f11e1271]: Apidog
+        - generic [ref=f11e1275] [cursor=pointer]:
+          - button "x deepseek - Integrate DeepSeek AI Service in Command Line | x-cmd mod cookbook" [ref=f11e1280]:
+            - img "x deepseek - Integrate DeepSeek AI Service in Command Line | x-cmd mod cookbook" [ref=f11e1282]
+          - link "x deepseek - Integrate DeepSeek AI Service in Command Line | x-cmd mod cookbook X-CMD" [ref=f11e1284]:
+            - /url: https://www.x-cmd.com/mod/deepseek/cookbook-1/
+            - generic [ref=f11e1285]:
+              - generic [ref=f11e1287]: x deepseek - Integrate DeepSeek AI Service in Command Line | x-cmd mod cookbook
+              - generic [ref=f11e1291]: X-CMD
+        - generic [ref=f11e1295] [cursor=pointer]:
+          - button "Introducing DeepSeek 4 - The Best Open-Source AI Model" [ref=f11e1300]:
+            - img "Introducing DeepSeek 4 - The Best Open-Source AI Model" [ref=f11e1302]
+          - link "Introducing DeepSeek 4 - The Best Open-Source AI Model Overchat AI" [ref=f11e1304]:
+            - /url: https://overchat.ai/models/deepseek-4
+            - generic [ref=f11e1305]:
+              - generic [ref=f11e1307]: Introducing DeepSeek 4 - The Best Open-Source AI Model
+              - generic [ref=f11e1311]: Overchat AI
+        - generic [ref=f11e1315] [cursor=pointer]:
+          - button "Deepseek - AI Chat Agent App During the UI design stage, we created a simple and minimalistic design system, organically merging AI functionality with the platform's layout." [ref=f11e1320]:
+            - img "Deepseek - AI Chat Agent App During the UI design stage, we created a simple and minimalistic design system, organically merging AI functionality with the platform's layout." [ref=f11e1322]
+          - link "Deepseek - AI Chat Agent App During the UI design stage, we created a simple and minimalistic design system, organically merging AI functionality with the platform's layout. Threads" [ref=f11e1324]:
+            - /url: https://www.threads.com/@awsmd_com/post/DFcsulbgQaA
+            - generic [ref=f11e1325]:
+              - generic [ref=f11e1327]: Deepseek - AI Chat Agent App During the UI design stage, we created a simple and minimalistic design system, organically merging AI functionality with the platform's layout.
+              - generic [ref=f11e1331]: Threads
+        - generic [ref=f11e1335] [cursor=pointer]:
+          - generic [ref=f11e1337]:
+            - 'button "GitHub - doxdk/deepseek-desktop: A desktop version of DeepSeek, an AI-powered application that provides intelligent assistance and interaction. This application allows users to access DeepSeek''s chat interface directly from their desktop, with support" [ref=f11e1340]':
+              - 'img "GitHub - doxdk/deepseek-desktop: A desktop version of DeepSeek, an AI-powered application that provides intelligent assistance and interaction. This application allows users to access DeepSeek''s chat interface directly from their desktop, with support" [ref=f11e1342]'
+            - generic:
+              - generic: 16 giờ trước
+          - 'link "GitHub - doxdk/deepseek-desktop: A desktop version of DeepSeek, an AI-powered application that provides intelligent assistance and interaction. This application allows users to access DeepSeek''s chat interface directly from their desktop, with support GitHub" [ref=f11e1344]':
+            - /url: https://github.com/doxdk/deepseek-desktop
+            - generic [ref=f11e1345]:
+              - generic [ref=f11e1347]: "GitHub - doxdk/deepseek-desktop: A desktop version of DeepSeek, an AI-powered application that provides intelligent assistance and interaction. This application allows users to access DeepSeek's chat interface directly from their desktop, with support"
+              - generic [ref=f11e1351]: GitHub
+        - generic [ref=f11e1355] [cursor=pointer]:
+          - 'button "DeepSeek V3 API Believes It Is GPT4... In the Chat Interface It Says It Is DeepSeek : r/OpenAI" [ref=f11e1360]':
+            - 'img "DeepSeek V3 API Believes It Is GPT4... In the Chat Interface It Says It Is DeepSeek : r/OpenAI" [ref=f11e1362]'
+          - 'link "DeepSeek V3 API Believes It Is GPT4... In the Chat Interface It Says It Is DeepSeek : r/OpenAI Reddit" [ref=f11e1364]':
+            - /url: https://www.reddit.com/r/OpenAI/comments/1ibo9u1/deepseek_v3_api_believes_it_is_gpt4_in_the_chat/
+            - generic [ref=f11e1365]:
+              - generic [ref=f11e1367]: "DeepSeek V3 API Believes It Is GPT4... In the Chat Interface It Says It Is DeepSeek : r/OpenAI"
+              - generic [ref=f11e1371]: Reddit
+        - generic [ref=f11e1375] [cursor=pointer]:
+          - 'button "Setting Up DeepSeek on a Local or Private Server: A Step-by-Step Tutorial – Nodus Labs: Ecological Thinking through Network Analysis" [ref=f11e1380]':
+            - 'img "Setting Up DeepSeek on a Local or Private Server: A Step-by-Step Tutorial – Nodus Labs: Ecological Thinking through Network Analysis" [ref=f11e1382]'
+          - 'link "Setting Up DeepSeek on a Local or Private Server: A Step-by-Step Tutorial – Nodus Labs: Ecological Thinking through Network Analysis Nodus Labs" [ref=f11e1384]':
+            - /url: https://noduslabs.com/featured/make-deepseek-ai-private/
+            - generic [ref=f11e1385]:
+              - generic [ref=f11e1387]: "Setting Up DeepSeek on a Local or Private Server: A Step-by-Step Tutorial – Nodus Labs: Ecological Thinking through Network Analysis"
+              - generic [ref=f11e1391]: Nodus Labs
+        - generic [ref=f11e1395] [cursor=pointer]:
+          - 'button "DeepSeek Local: How to Self-Host DeepSeek (Privacy and Control) | LinuxBlog.io" [ref=f11e1400]':
+            - 'img "DeepSeek Local: How to Self-Host DeepSeek (Privacy and Control) | LinuxBlog.io" [ref=f11e1402]'
+          - 'link "DeepSeek Local: How to Self-Host DeepSeek (Privacy and Control) | LinuxBlog.io LinuxBlog.io" [ref=f11e1404]':
+            - /url: https://linuxblog.io/deepseek-local-self-host/
+            - generic [ref=f11e1405]:
+              - generic [ref=f11e1407]: "DeepSeek Local: How to Self-Host DeepSeek (Privacy and Control) | LinuxBlog.io"
+              - generic [ref=f11e1411]: LinuxBlog.io
+        - generic [ref=f11e1415] [cursor=pointer]:
+          - button "DeepStyled - Custom Deepseek – Get this Extension for Firefox (en-GB)" [ref=f11e1420]:
+            - img "DeepStyled - Custom Deepseek – Get this Extension for Firefox (en-GB)" [ref=f11e1422]
+          - link "DeepStyled - Custom Deepseek – Get this Extension for Firefox (en-GB) Firefox for Android extensions" [ref=f11e1424]:
+            - /url: https://addons.mozilla.org/en-GB/firefox/addon/deepstyled-custom-deepseek/
+            - generic [ref=f11e1425]:
+              - generic [ref=f11e1427]: DeepStyled - Custom Deepseek – Get this Extension for Firefox (en-GB)
+              - generic [ref=f11e1431]: Firefox for Android extensions
+        - generic [ref=f11e1435] [cursor=pointer]:
+          - button "DeepSeek iOS Screen | Mobbin" [ref=f11e1440]:
+            - img "DeepSeek iOS Screen | Mobbin" [ref=f11e1442]
+          - link "DeepSeek iOS Screen | Mobbin Mobbin" [ref=f11e1444]:
+            - /url: https://mobbin.com/explore/screens/10794d17-292c-45a5-8fb7-d50914cd402f
+            - generic [ref=f11e1445]:
+              - generic [ref=f11e1447]: DeepSeek iOS Screen | Mobbin
+              - generic [ref=f11e1451]: Mobbin
+        - generic [ref=f11e1455] [cursor=pointer]:
+          - button "DeepSeek AI Chat - Visual Studio Marketplace" [ref=f11e1460]:
+            - img "DeepSeek AI Chat - Visual Studio Marketplace" [ref=f11e1462]
+          - link "DeepSeek AI Chat - Visual Studio Marketplace Visual Studio Marketplace" [ref=f11e1464]:
+            - /url: https://marketplace.visualstudio.com/items?itemName=AmaanPatel.deepseek-ai
+            - generic [ref=f11e1465]:
+              - generic [ref=f11e1467]: DeepSeek AI Chat - Visual Studio Marketplace
+              - generic [ref=f11e1471]: Visual Studio Marketplace
+        - generic [ref=f11e1475] [cursor=pointer]:
+          - 'button "DeepSeek-GUI is more than a chat UI — it''s a desktop workspace for serious AI agents built around DeepSeek. What stands out: • Kun runtime with cache-first loops for strong token ROI •" [ref=f11e1480]':
+            - 'img "DeepSeek-GUI is more than a chat UI — it''s a desktop workspace for serious AI agents built around DeepSeek. What stands out: • Kun runtime with cache-first loops for strong token ROI •" [ref=f11e1482]'
+          - 'link "DeepSeek-GUI is more than a chat UI — it''s a desktop workspace for serious AI agents built around DeepSeek. What stands out: • Kun runtime with cache-first loops for strong token ROI • Threads" [ref=f11e1484]':
+            - /url: https://www.threads.com/@thanhnguyenduy2026/post/DZUtpclkxB4/deep-seek-gui-is-more-than-a-chat-ui-its-a-desktop-workspace-for-serious-ai/
+            - generic [ref=f11e1485]:
+              - generic [ref=f11e1487]: "DeepSeek-GUI is more than a chat UI — it's a desktop workspace for serious AI agents built around DeepSeek. What stands out: • Kun runtime with cache-first loops for strong token ROI •"
+              - generic [ref=f11e1491]: Threads
+        - generic [ref=f11e1495] [cursor=pointer]:
+          - button "DeepSeek rollout DeepSeek Vision in Beta, introducing a dedicated image-understanding mode natively within the DeepSeek Chat interface." [ref=f11e1500]:
+            - img "DeepSeek rollout DeepSeek Vision in Beta, introducing a dedicated image-understanding mode natively within the DeepSeek Chat interface." [ref=f11e1502]
+          - link "DeepSeek rollout DeepSeek Vision in Beta, introducing a dedicated image-understanding mode natively within the DeepSeek Chat interface. x.com" [ref=f11e1504]:
+            - /url: https://x.com/WesRoth/status/2049639874677129238
+            - generic [ref=f11e1505]:
+              - generic [ref=f11e1507]: DeepSeek rollout DeepSeek Vision in Beta, introducing a dedicated image-understanding mode natively within the DeepSeek Chat interface.
+              - generic [ref=f11e1511]: x.com
+        - generic [ref=f11e1515] [cursor=pointer]:
+          - 'button "DeepSeek vs ChatGPT: Which AI to choose? Which one is more reliable?" [ref=f11e1520]':
+            - 'img "DeepSeek vs ChatGPT: Which AI to choose? Which one is more reliable?" [ref=f11e1522]'
+          - 'link "DeepSeek vs ChatGPT: Which AI to choose? Which one is more reliable? Liora" [ref=f11e1524]':
+            - /url: https://liora.io/en/deepseek-vs-chatgpt
+            - generic [ref=f11e1525]:
+              - generic [ref=f11e1527]: "DeepSeek vs ChatGPT: Which AI to choose? Which one is more reliable?"
+              - generic [ref=f11e1531]: Liora
+        - generic [ref=f11e1535] [cursor=pointer]:
+          - button "Use Cases - Chat-Deep.ai" [ref=f11e1540]:
+            - img "Use Cases - Chat-Deep.ai" [ref=f11e1542]
+          - link "Use Cases - Chat-Deep.ai DeepSeek AI" [ref=f11e1544]:
+            - /url: https://chat-deep.ai/use-cases/
+            - generic [ref=f11e1545]:
+              - generic [ref=f11e1547]: Use Cases - Chat-Deep.ai
+              - generic [ref=f11e1551]: DeepSeek AI
+        - generic [ref=f11e1555] [cursor=pointer]:
+          - button "What Is DeepSeek? China Shocks AI Industry With 'Sputnik Moment'" [ref=f11e1560]:
+            - img "What Is DeepSeek? China Shocks AI Industry With 'Sputnik Moment'" [ref=f11e1562]
+          - link "What Is DeepSeek? China Shocks AI Industry With 'Sputnik Moment' PCMag Australia" [ref=f11e1564]:
+            - /url: https://au.pcmag.com/ai/109456/what-is-deepseek-china-shocks-ai-industry-with-sputnik-moment
+            - generic [ref=f11e1565]:
+              - generic [ref=f11e1567]: What Is DeepSeek? China Shocks AI Industry With 'Sputnik Moment'
+              - generic [ref=f11e1571]: PCMag Australia
+        - generic [ref=f11e1575] [cursor=pointer]:
+          - 'button "DeepSeek: A new AI is taking over the world. What makes it unique? – Samsung Magazine" [ref=f11e1580]':
+            - 'img "DeepSeek: A new AI is taking over the world. What makes it unique? – Samsung Magazine" [ref=f11e1582]'
+          - 'link "DeepSeek: A new AI is taking over the world. What makes it unique? – Samsung Magazine samsungmagazine.eu" [ref=f11e1584]':
+            - /url: https://samsungmagazine.eu/en/2025/01/27/deepseek/
+            - generic [ref=f11e1585]:
+              - generic [ref=f11e1587]: "DeepSeek: A new AI is taking over the world. What makes it unique? – Samsung Magazine"
+              - generic [ref=f11e1591]: samsungmagazine.eu
+        - generic [ref=f11e1595] [cursor=pointer]:
+          - button "Build a Free Open Source ChatGPT Operator Alternative with DeepSeek R1 and Browser Use" [ref=f11e1600]:
+            - img "Build a Free Open Source ChatGPT Operator Alternative with DeepSeek R1 and Browser Use" [ref=f11e1602]
+          - link "Build a Free Open Source ChatGPT Operator Alternative with DeepSeek R1 and Browser Use Apidog" [ref=f11e1604]:
+            - /url: https://apidog.com/blog/how-to-use-deepseek-r1-to-build-an-open-source-chatgpt-operator-alternative/
+            - generic [ref=f11e1605]:
+              - generic [ref=f11e1607]: Build a Free Open Source ChatGPT Operator Alternative with DeepSeek R1 and Browser Use
+              - generic [ref=f11e1611]: Apidog
+        - generic [ref=f11e1615] [cursor=pointer]:
+          - button "Is DeepSeek Offline to Use on Windows PC [in detail]" [ref=f11e1620]:
+            - img "Is DeepSeek Offline to Use on Windows PC [in detail]" [ref=f11e1622]
+          - link "Is DeepSeek Offline to Use on Windows PC [in detail] Kingshiper" [ref=f11e1624]:
+            - /url: https://www.kingshiper.com/ai-tips/is-deepseek-offline-to-use.html
+            - generic [ref=f11e1625]:
+              - generic [ref=f11e1627]: Is DeepSeek Offline to Use on Windows PC [in detail]
+              - generic [ref=f11e1631]: Kingshiper
+        - generic [ref=f11e1635] [cursor=pointer]:
+          - 'button "How to build a DeepSeek-R1 chatbot | by Chanin Nantasenamat | Snowflake Builders Blog: Data Engineers, App Developers, AI, & Data Science | Medium" [ref=f11e1640]':
+            - 'img "How to build a DeepSeek-R1 chatbot | by Chanin Nantasenamat | Snowflake Builders Blog: Data Engineers, App Developers, AI, & Data Science | Medium" [ref=f11e1642]'
+          - 'link "How to build a DeepSeek-R1 chatbot | by Chanin Nantasenamat | Snowflake Builders Blog: Data Engineers, App Developers, AI, & Data Science | Medium Medium" [ref=f11e1644]':
+            - /url: https://medium.com/snowflake/how-to-build-a-deepseek-r1-chatbot-1edbf6e5e9fe
+            - generic [ref=f11e1645]:
+              - generic [ref=f11e1647]: "How to build a DeepSeek-R1 chatbot | by Chanin Nantasenamat | Snowflake Builders Blog: Data Engineers, App Developers, AI, & Data Science | Medium"
+              - generic [ref=f11e1651]: Medium
+        - generic [ref=f11e1655] [cursor=pointer]:
+          - button "What Is DeepSeek? the Chinese AI That Shocked Silicon Valley - Business Insider" [ref=f11e1660]:
+            - img "What Is DeepSeek? the Chinese AI That Shocked Silicon Valley - Business Insider" [ref=f11e1662]
+          - link "What Is DeepSeek? the Chinese AI That Shocked Silicon Valley - Business Insider Business Insider" [ref=f11e1664]:
+            - /url: https://www.businessinsider.com/what-is-deepseek-r1-china-ai-2025-1
+            - generic [ref=f11e1665]:
+              - generic [ref=f11e1667]: What Is DeepSeek? the Chinese AI That Shocked Silicon Valley - Business Insider
+              - generic [ref=f11e1671]: Business Insider
+        - generic [ref=f11e1675] [cursor=pointer]:
+          - 'button "DeepSeek vs. ChatGPT: Hands On With DeepSeek''s R1 Chatbot | WIRED" [ref=f11e1680]':
+            - 'img "DeepSeek vs. ChatGPT: Hands On With DeepSeek''s R1 Chatbot | WIRED" [ref=f11e1682]'
+          - 'link "DeepSeek vs. ChatGPT: Hands On With DeepSeek''s R1 Chatbot | WIRED WIRED" [ref=f11e1684]':
+            - /url: https://www.wired.com/story/deepseek-chatbot-hands-on-vs-chatgpt/
+            - generic [ref=f11e1685]:
+              - generic [ref=f11e1687]: "DeepSeek vs. ChatGPT: Hands On With DeepSeek's R1 Chatbot | WIRED"
+              - generic [ref=f11e1691]: WIRED
+        - generic [ref=f11e1695] [cursor=pointer]:
+          - button "Deepseek Chat Exporter - Chrome Web Store" [ref=f11e1700]:
+            - img "Deepseek Chat Exporter - Chrome Web Store" [ref=f11e1702]
+          - link "Deepseek Chat Exporter - Chrome Web Store Chrome Web Store - Google" [ref=f11e1704]:
+            - /url: https://chromewebstore.google.com/detail/deepseek-chat-exporter/jenaciaabfbghjajggefclogomljkeoi
+            - generic [ref=f11e1705]:
+              - generic [ref=f11e1707]: Deepseek Chat Exporter - Chrome Web Store
+              - generic [ref=f11e1711]: Chrome Web Store - Google
+        - generic [ref=f11e1715] [cursor=pointer]:
+          - 'button "DeepSeek: when UI doesn''t matter. Localisation, prompting and a cute… | by Rosie Hoggmascall | UX Collective" [ref=f11e1720]':
+            - 'img "DeepSeek: when UI doesn''t matter. Localisation, prompting and a cute… | by Rosie Hoggmascall | UX Collective" [ref=f11e1722]'
+          - 'link "DeepSeek: when UI doesn''t matter. Localisation, prompting and a cute… | by Rosie Hoggmascall | UX Collective UX Collective" [ref=f11e1724]':
+            - /url: https://uxdesign.cc/deepseek-when-ui-doesnt-matter-77dd635c65a6
+            - generic [ref=f11e1725]:
+              - generic [ref=f11e1727]: "DeepSeek: when UI doesn't matter. Localisation, prompting and a cute… | by Rosie Hoggmascall | UX Collective"
+              - generic [ref=f11e1731]: UX Collective
+        - generic [ref=f11e1735] [cursor=pointer]:
+          - button "x deepseek - Integrate DeepSeek AI Service in Command Line | x-cmd mod cookbook" [ref=f11e1740]:
+            - img "x deepseek - Integrate DeepSeek AI Service in Command Line | x-cmd mod cookbook" [ref=f11e1742]
+          - link "x deepseek - Integrate DeepSeek AI Service in Command Line | x-cmd mod cookbook X-CMD" [ref=f11e1744]:
+            - /url: https://www.x-cmd.com/mod/deepseek/cookbook-1/
+            - generic [ref=f11e1745]:
+              - generic [ref=f11e1747]: x deepseek - Integrate DeepSeek AI Service in Command Line | x-cmd mod cookbook
+              - generic [ref=f11e1751]: X-CMD
+        - generic [ref=f11e1755] [cursor=pointer]:
+          - generic [ref=f11e1757]:
+            - 'button "DeepSeek AI Chatbot Interface on Smartphone Editorial Stock Photo - Image of automation, deepseek: 357868118" [ref=f11e1760]':
+              - 'img "DeepSeek AI Chatbot Interface on Smartphone Editorial Stock Photo - Image of automation, deepseek: 357868118" [ref=f11e1762]'
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic: Có thể cấp phép
+          - 'link "DeepSeek AI Chatbot Interface on Smartphone Editorial Stock Photo - Image of automation, deepseek: 357868118 Dreamstime.com" [ref=f11e1764]':
+            - /url: https://www.dreamstime.com/smartphone-screen-displaying-deepseek-ai-chatbot-interface-welcome-message-smart-assistant-task-management-automation-image357868118
+            - generic [ref=f11e1765]:
+              - generic [ref=f11e1767]: "DeepSeek AI Chatbot Interface on Smartphone Editorial Stock Photo - Image of automation, deepseek: 357868118"
+              - generic [ref=f11e1771]: Dreamstime.com
+        - generic [ref=f11e1775] [cursor=pointer]:
+          - button "What questions will China's DeepSeek not answer?" [ref=f11e1780]:
+            - img "What questions will China's DeepSeek not answer?" [ref=f11e1782]
+          - link "What questions will China's DeepSeek not answer? DW News" [ref=f11e1784]:
+            - /url: https://www.dw.com/en/what-questions-will-chinas-deepseek-not-answer/a-71470843
+            - generic [ref=f11e1785]:
+              - generic [ref=f11e1787]: What questions will China's DeepSeek not answer?
+              - generic [ref=f11e1791]: DW News
+        - generic [ref=f11e1795] [cursor=pointer]:
+          - 'button "DeepSeek AI: How to try DeepSeek R1 right now | Mashable" [ref=f11e1800]':
+            - 'img "DeepSeek AI: How to try DeepSeek R1 right now | Mashable" [ref=f11e1802]'
+          - 'link "DeepSeek AI: How to try DeepSeek R1 right now | Mashable Mashable" [ref=f11e1804]':
+            - /url: https://mashable.com/article/deepseek-ai-r1-how-to-try-iphone-desktop
+            - generic [ref=f11e1805]:
+              - generic [ref=f11e1807]: "DeepSeek AI: How to try DeepSeek R1 right now | Mashable"
+              - generic [ref=f11e1811]: Mashable
+        - generic [ref=f11e1815] [cursor=pointer]:
+          - button "Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog" [ref=f11e1820]:
+            - img "Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog" [ref=f11e1822]
+          - link "Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog Wiz" [ref=f11e1824]:
+            - /url: https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak
+            - generic [ref=f11e1825]:
+              - generic [ref=f11e1827]: Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog
+              - generic [ref=f11e1831]: Wiz
+        - generic [ref=f11e1835] [cursor=pointer]:
+          - button "Building an AI Chatbot with DeepSeek and Streamlit | by Cameron Jones | Medium" [ref=f11e1840]:
+            - img "Building an AI Chatbot with DeepSeek and Streamlit | by Cameron Jones | Medium" [ref=f11e1842]
+          - link "Building an AI Chatbot with DeepSeek and Streamlit | by Cameron Jones | Medium Medium" [ref=f11e1844]:
+            - /url: https://medium.com/@cameronjosephjones/building-an-ai-chatbot-with-deepseek-and-streamlit-aec2bab82928
+            - generic [ref=f11e1845]:
+              - generic [ref=f11e1847]: Building an AI Chatbot with DeepSeek and Streamlit | by Cameron Jones | Medium
+              - generic [ref=f11e1851]: Medium
+        - generic [ref=f11e1855] [cursor=pointer]:
+          - button "Here's How DeepSeek Censorship Actually Works—and How to Get Around It | WIRED" [ref=f11e1860]:
+            - img "Here's How DeepSeek Censorship Actually Works—and How to Get Around It | WIRED" [ref=f11e1862]
+          - link "Here's How DeepSeek Censorship Actually Works—and How to Get Around It | WIRED WIRED" [ref=f11e1864]:
+            - /url: https://www.wired.com/story/deepseek-censorship/
+            - generic [ref=f11e1865]:
+              - generic [ref=f11e1867]: Here's How DeepSeek Censorship Actually Works—and How to Get Around It | WIRED
+              - generic [ref=f11e1871]: WIRED
+        - generic [ref=f11e1875] [cursor=pointer]:
+          - generic [ref=f11e1877]:
+            - button "DeepSeek - Lesson 69 - Screenshot to Code" [ref=f11e1880]:
+              - img "DeepSeek - Lesson 69 - Screenshot to Code" [ref=f11e1882]
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic: Video
+          - link "DeepSeek - Lesson 69 - Screenshot to Code YouTube" [ref=f11e1884]:
+            - /url: https://www.youtube.com/watch?v=e8QXiqxvVFE
+            - generic [ref=f11e1885]:
+              - generic [ref=f11e1887]: DeepSeek - Lesson 69 - Screenshot to Code
+              - generic [ref=f11e1891]: YouTube
+        - generic [ref=f11e1895] [cursor=pointer]:
+          - button "DeepSeek's real advantage is not the model, it's the bill US firms are adopting DeepSeek not because they prefer Chinese software. Because the cost gap with American models is impossible to ignore." [ref=f11e1900]:
+            - img "DeepSeek's real advantage is not the model, it's the bill US firms are adopting DeepSeek not because they prefer Chinese software. Because the cost gap with American models is impossible to ignore." [ref=f11e1902]
+          - link "DeepSeek's real advantage is not the model, it's the bill US firms are adopting DeepSeek not because they prefer Chinese software. Because the cost gap with American models is impossible to ignore. Instagram" [ref=f11e1904]:
+            - /url: https://www.instagram.com/p/DZNe5obPzkV/
+            - generic [ref=f11e1905]:
+              - generic [ref=f11e1907]: DeepSeek's real advantage is not the model, it's the bill US firms are adopting DeepSeek not because they prefer Chinese software. Because the cost gap with American models is impossible to ignore.
+              - generic [ref=f11e1911]: Instagram
+        - generic [ref=f11e1915] [cursor=pointer]:
+          - 'button "Like ChatGPT, DeepSeek is free: Here''s how to use it on your smartphone, laptop and PC | Technology News - The Indian Express" [ref=f11e1920]':
+            - 'img "Like ChatGPT, DeepSeek is free: Here''s how to use it on your smartphone, laptop and PC | Technology News - The Indian Express" [ref=f11e1922]'
+          - 'link "Like ChatGPT, DeepSeek is free: Here''s how to use it on your smartphone, laptop and PC | Technology News - The Indian Express The Indian Express" [ref=f11e1924]':
+            - /url: https://indianexpress.com/article/technology/techook/deepseek-how-to-use-for-free-smartphone-laptop-pc-9805383/
+            - generic [ref=f11e1925]:
+              - generic [ref=f11e1927]: "Like ChatGPT, DeepSeek is free: Here's how to use it on your smartphone, laptop and PC | Technology News - The Indian Express"
+              - generic [ref=f11e1931]: The Indian Express
+        - generic [ref=f11e1935] [cursor=pointer]:
+          - button "Close Shot Smartphone Screen Displaying Deepseek Stock Photo 2585274143 | Shutterstock" [ref=f11e1940]:
+            - img "Close Shot Smartphone Screen Displaying Deepseek Stock Photo 2585274143 | Shutterstock" [ref=f11e1942]
+          - link "Close Shot Smartphone Screen Displaying Deepseek Stock Photo 2585274143 | Shutterstock Shutterstock" [ref=f11e1944]:
+            - /url: https://www.shutterstock.com/image-photo/close-shot-smartphone-screen-displaying-deepseek-2585274143
+            - generic [ref=f11e1945]:
+              - generic [ref=f11e1947]: Close Shot Smartphone Screen Displaying Deepseek Stock Photo 2585274143 | Shutterstock
+              - generic [ref=f11e1951]: Shutterstock
+        - generic [ref=f11e1955] [cursor=pointer]:
+          - 'button "bug: deepseek + ai mode generates broken mjml, thinking is not conveyed in the chat UI · Issue #363 · Notifuse/notifuse" [ref=f11e1960]':
+            - 'img "bug: deepseek + ai mode generates broken mjml, thinking is not conveyed in the chat UI · Issue #363 · Notifuse/notifuse" [ref=f11e1962]'
+          - 'link "bug: deepseek + ai mode generates broken mjml, thinking is not conveyed in the chat UI · Issue #363 · Notifuse/notifuse GitHub" [ref=f11e1964]':
+            - /url: https://github.com/Notifuse/notifuse/issues/363
+            - generic [ref=f11e1965]:
+              - generic [ref=f11e1967]: "bug: deepseek + ai mode generates broken mjml, thinking is not conveyed in the chat UI · Issue #363 · Notifuse/notifuse"
+              - generic [ref=f11e1971]: GitHub
+        - generic [ref=f11e1975] [cursor=pointer]:
+          - generic [ref=f11e1977]:
+            - button "DeepSeek AI interface is seen on the smartphone placed on laptop keyboard. Concept for a new chat bot, competitor to Chat GPT. Stafford, United Kingdo Stock Photo - Alamy" [ref=f11e1980]:
+              - img "DeepSeek AI interface is seen on the smartphone placed on laptop keyboard. Concept for a new chat bot, competitor to Chat GPT. Stafford, United Kingdo Stock Photo - Alamy" [ref=f11e1982]
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic: Có thể cấp phép
+          - link "DeepSeek AI interface is seen on the smartphone placed on laptop keyboard. Concept for a new chat bot, competitor to Chat GPT. Stafford, United Kingdo Stock Photo - Alamy Alamy" [ref=f11e1984]:
+            - /url: https://www.alamy.com/deepseek-ai-interface-is-seen-on-the-smartphone-placed-on-laptop-keyboard-concept-for-a-new-chat-bot-competitor-to-chat-gpt-stafford-united-kingdo-image642719280.html
+            - generic [ref=f11e1985]:
+              - generic [ref=f11e1987]: DeepSeek AI interface is seen on the smartphone placed on laptop keyboard. Concept for a new chat bot, competitor to Chat GPT. Stafford, United Kingdo Stock Photo - Alamy
+              - generic [ref=f11e1991]: Alamy
+        - generic [ref=f11e1995] [cursor=pointer]:
+          - button "China's AI Startup DeepSeek Hit By Large-Scale \"Cyberattack\", Limits New Registration" [ref=f11e2000]:
+            - img "China's AI Startup DeepSeek Hit By Large-Scale \"Cyberattack\", Limits New Registration" [ref=f11e2002]
+          - link "China's AI Startup DeepSeek Hit By Large-Scale \"Cyberattack\", Limits New Registration NDTV" [ref=f11e2004]:
+            - /url: https://www.ndtv.com/world-news/chinas-ai-startup-deepseek-hit-by-large-scale-cyberattack-limits-new-registration-7573557
+            - generic [ref=f11e2005]:
+              - generic [ref=f11e2007]: China's AI Startup DeepSeek Hit By Large-Scale "Cyberattack", Limits New Registration
+              - generic [ref=f11e2011]: NDTV
+        - generic [ref=f11e2015] [cursor=pointer]:
+          - button "Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog" [ref=f11e2020]:
+            - img "Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog" [ref=f11e2022]
+          - link "Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog Wiz" [ref=f11e2024]:
+            - /url: https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak
+            - generic [ref=f11e2025]:
+              - generic [ref=f11e2027]: Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog
+              - generic [ref=f11e2031]: Wiz
+        - generic [ref=f11e2035] [cursor=pointer]:
+          - 'button "Run DeepSeek R1 Locally: A Full Guide & My Honest Review of this Free OpenAI Alternative - DigiAlps LTD" [ref=f11e2040]':
+            - 'img "Run DeepSeek R1 Locally: A Full Guide & My Honest Review of this Free OpenAI Alternative - DigiAlps LTD" [ref=f11e2042]'
+          - 'link "Run DeepSeek R1 Locally: A Full Guide & My Honest Review of this Free OpenAI Alternative - DigiAlps LTD DigiAlps LTD" [ref=f11e2044]':
+            - /url: https://digialps.com/run-deepseek-r1-locally-a-full-guide-my-honest-review-of-this-free-openai-alternative/
+            - generic [ref=f11e2045]:
+              - generic [ref=f11e2047]: "Run DeepSeek R1 Locally: A Full Guide & My Honest Review of this Free OpenAI Alternative - DigiAlps LTD"
+              - generic [ref=f11e2051]: DigiAlps LTD
+        - generic [ref=f11e2055] [cursor=pointer]:
+          - button "Deploy DeepSeek" [ref=f11e2060]:
+            - img "Deploy DeepSeek" [ref=f11e2062]
+          - link "Deploy DeepSeek Railway" [ref=f11e2064]:
+            - /url: https://railway.com/deploy/deepseek
+            - generic [ref=f11e2065]:
+              - generic [ref=f11e2067]: Deploy DeepSeek
+              - generic [ref=f11e2071]: Railway
+        - generic [ref=f11e2075] [cursor=pointer]:
+          - button "DeepSeek-OCR 2 Inference and Gradio Application" [ref=f11e2080]:
+            - img "DeepSeek-OCR 2 Inference and Gradio Application" [ref=f11e2082]
+          - link "DeepSeek-OCR 2 Inference and Gradio Application DebuggerCafe" [ref=f11e2084]:
+            - /url: https://debuggercafe.com/deepseek-ocr-2-inference-and-gradio-application/
+            - generic [ref=f11e2085]:
+              - generic [ref=f11e2087]: DeepSeek-OCR 2 Inference and Gradio Application
+              - generic [ref=f11e2091]: DebuggerCafe
+        - generic [ref=f11e2095] [cursor=pointer]:
+          - button "Deepseek Chat Prefix Completion For Conversational UIs" [ref=f11e2100]:
+            - img "Deepseek Chat Prefix Completion For Conversational UIs" [ref=f11e2102]
+          - link "Deepseek Chat Prefix Completion For Conversational UIs Cobus Greyling on LLMs, NLU, NLP, chatbots & voicebots - Substack" [ref=f11e2104]:
+            - /url: https://cobusgreyling.substack.com/p/deepseek-chat-prefix-completion-for
+            - generic [ref=f11e2105]:
+              - generic [ref=f11e2107]: Deepseek Chat Prefix Completion For Conversational UIs
+              - generic [ref=f11e2111]: Cobus Greyling on LLMs, NLU, NLP, chatbots & voicebots - Substack
+        - generic [ref=f11e2115] [cursor=pointer]:
+          - button "Deepseek's V3 is the latest example of state-controlled censorship in Chinese LLMs" [ref=f11e2120]:
+            - img "Deepseek's V3 is the latest example of state-controlled censorship in Chinese LLMs" [ref=f11e2122]
+          - link "Deepseek's V3 is the latest example of state-controlled censorship in Chinese LLMs The Decoder" [ref=f11e2124]:
+            - /url: https://the-decoder.com/deepseeks-v3-is-the-latest-example-of-state-controlled-censorship-in-chinese-llms/
+            - generic [ref=f11e2125]:
+              - generic [ref=f11e2127]: Deepseek's V3 is the latest example of state-controlled censorship in Chinese LLMs
+              - generic [ref=f11e2131]: The Decoder
+        - generic [ref=f11e2135] [cursor=pointer]:
+          - 'button "DeepSeek R-1 on Your Mac: 4 Surprisingly Simple Local Setup Tricks | by Krupesh Raikar | Medium | Towards AI" [ref=f11e2140]':
+            - 'img "DeepSeek R-1 on Your Mac: 4 Surprisingly Simple Local Setup Tricks | by Krupesh Raikar | Medium | Towards AI" [ref=f11e2142]'
+          - 'link "DeepSeek R-1 on Your Mac: 4 Surprisingly Simple Local Setup Tricks | by Krupesh Raikar | Medium | Towards AI Towards AI" [ref=f11e2144]':
+            - /url: https://pub.towardsai.net/deepseek-r-1-on-your-mac-4-surprisingly-simple-local-setup-tricks-c292429cde12
+            - generic [ref=f11e2145]:
+              - generic [ref=f11e2147]: "DeepSeek R-1 on Your Mac: 4 Surprisingly Simple Local Setup Tricks | by Krupesh Raikar | Medium | Towards AI"
+              - generic [ref=f11e2151]: Towards AI
+        - generic [ref=f11e2155] [cursor=pointer]:
+          - generic [ref=f11e2157]:
+            - button "A new China-based AI, DeepSeek, has soared to No. 1 in Apple's App Store, causing a sharp decline in US tech stocks. , Ray Wang of Constellation Research explains why this AI is a game-changer and ..." [ref=f11e2160]:
+              - img "A new China-based AI, DeepSeek, has soared to No. 1 in Apple's App Store, causing a sharp decline in US tech stocks. , Ray Wang of Constellation Research explains why this AI is a game-changer and ..." [ref=f11e2162]
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic: Video
+          - link "A new China-based AI, DeepSeek, has soared to No. 1 in Apple's App Store, causing a sharp decline in US tech stocks. , Ray Wang of Constellation Research explains why this AI is a game-changer and ... Instagram" [ref=f11e2164]:
+            - /url: https://www.instagram.com/reel/DFV16l1BpsJ/
+            - generic [ref=f11e2165]:
+              - generic [ref=f11e2167]: A new China-based AI, DeepSeek, has soared to No. 1 in Apple's App Store, causing a sharp decline in US tech stocks. , Ray Wang of Constellation Research explains why this AI is a game-changer and ...
+              - generic [ref=f11e2171]: Instagram
+        - generic [ref=f11e2175] [cursor=pointer]:
+          - 'button "DeepSeek vs ChatGPT: Which AI Tool Is Best?" [ref=f11e2180]':
+            - 'img "DeepSeek vs ChatGPT: Which AI Tool Is Best?" [ref=f11e2182]'
+          - 'link "DeepSeek vs ChatGPT: Which AI Tool Is Best? Justdone" [ref=f11e2184]':
+            - /url: https://justdone.com/blog/ai/deepseek-vs-chatgpt
+            - generic [ref=f11e2185]:
+              - generic [ref=f11e2187]: "DeepSeek vs ChatGPT: Which AI Tool Is Best?"
+              - generic [ref=f11e2191]: Justdone
+        - generic [ref=f11e2195] [cursor=pointer]:
+          - button "DeepSeek AI - Floating AI Chat - Chrome Web Store" [ref=f11e2200]:
+            - img "DeepSeek AI - Floating AI Chat - Chrome Web Store" [ref=f11e2202]
+          - link "DeepSeek AI - Floating AI Chat - Chrome Web Store Chrome Web Store - Google" [ref=f11e2204]:
+            - /url: https://chromewebstore.google.com/detail/deepseek-ai/bjjobdlpgglckcmhgmmecijpfobmcpap
+            - generic [ref=f11e2205]:
+              - generic [ref=f11e2207]: DeepSeek AI - Floating AI Chat - Chrome Web Store
+              - generic [ref=f11e2211]: Chrome Web Store - Google
+        - generic [ref=f11e2215] [cursor=pointer]:
+          - button "Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog" [ref=f11e2220]:
+            - img "Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog" [ref=f11e2222]
+          - link "Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog Wiz" [ref=f11e2224]:
+            - /url: https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak
+            - generic [ref=f11e2225]:
+              - generic [ref=f11e2227]: Wiz Research Uncovers Exposed DeepSeek Database Leaking Sensitive Information, Including Chat History | Wiz Blog
+              - generic [ref=f11e2231]: Wiz
+        - generic [ref=f11e2235] [cursor=pointer]:
+          - button "deepseek-chat by deepseek | AI Model Pricing, Performance & API Access | LangDB" [ref=f11e2240]:
+            - img "deepseek-chat by deepseek | AI Model Pricing, Performance & API Access | LangDB" [ref=f11e2242]
+          - link "deepseek-chat by deepseek | AI Model Pricing, Performance & API Access | LangDB LangDB" [ref=f11e2244]:
+            - /url: https://langdb.ai/app/models/deepseek/deepseek-chat
+            - generic [ref=f11e2245]:
+              - generic [ref=f11e2247]: deepseek-chat by deepseek | AI Model Pricing, Performance & API Access | LangDB
+              - generic [ref=f11e2251]: LangDB
+      - generic [ref=f11e2255]:
+        - heading "Page Navigation" [level=1] [ref=f11e2256]
+        - button "Kết quả khác" [ref=f11e2257] [cursor=pointer]:
+          - generic [ref=f11e2258]:
+            - separator [ref=f11e2259]
+            - generic [ref=f11e2260]:
+              - generic [ref=f11e2261]: Kết quả khác
+              - img [ref=f11e2263]
+      - navigation

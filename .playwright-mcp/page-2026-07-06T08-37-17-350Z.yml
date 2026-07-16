@@ -1,0 +1,35 @@
+- generic [ref=f8e4]:
+  - generic [ref=f8e5]:
+    - img [ref=f8e8]
+    - generic [ref=f8e21]:
+      - textbox "Phone number / email address" [ref=f8e25]
+      - generic [ref=f8e29]:
+        - textbox "Password" [ref=f8e30]
+        - button [ref=f8e32] [cursor=pointer]:
+          - img [ref=f8e35]
+      - generic [ref=f8e40]:
+        - text: By signing up or logging in, you consent to DeepSeek's
+        - link "Terms of Use" [ref=f8e41] [cursor=pointer]:
+          - /url: https://cdn.deepseek.com/policies/en-US/deepseek-terms-of-use.html?locale=en_US
+        - text: and
+        - link "Privacy Policy" [ref=f8e42] [cursor=pointer]:
+          - /url: https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html?locale=en_US
+        - text: .
+      - generic [ref=f8e43]:
+        - button "Forgot password?" [ref=f8e44] [cursor=pointer]:
+          - generic [ref=f8e46]: Forgot password?
+        - button "Sign up" [ref=f8e47] [cursor=pointer]:
+          - generic [ref=f8e49]: Sign up
+      - button "Log in" [ref=f8e50] [cursor=pointer]:
+        - generic [ref=f8e52]: Log in
+      - generic [ref=f8e54]:
+        - button "Log in with Google" [ref=f8e55] [cursor=pointer]:
+          - generic [ref=f8e57]: Log in with Google
+        - button "Login with Apple" [ref=f8e59] [cursor=pointer]:
+          - generic [ref=f8e61]: Login with Apple
+  - generic [ref=f8e63]:
+    - link "浙ICP备2023025841号" [ref=f8e64] [cursor=pointer]:
+      - /url: https://beian.miit.gov.cn
+    - generic [ref=f8e65]: ·
+    - link "Contact us" [ref=f8e66] [cursor=pointer]:
+      - /url: https://trtgsjkv6r.feishu.cn/share/base/form/shrcnhcHE4A6lQaQ3v0raCXmBAg
