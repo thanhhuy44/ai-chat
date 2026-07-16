@@ -3,8 +3,8 @@ import { protectedProcedure } from '../init'
 import type { TRPCRouterRecord } from '@trpc/server'
 
 import { TRPCError } from '@trpc/server'
-import { db } from '#/db'
-import { conversation, message } from '#/db/schema'
+import { db } from '@/db'
+import { conversation, message } from '@/db/schema'
 import { and, asc, desc, eq, gt } from 'drizzle-orm'
 import z, { string } from 'zod'
 

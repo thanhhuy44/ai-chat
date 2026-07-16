@@ -1,4 +1,5 @@
-import { useTRPC } from '#/trpc/react'
+import { useTRPC } from '@/trpc/react'
+import { Button } from '@/components/ui/button'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { ArrowUpIcon, CircleNotchIcon } from '@phosphor-icons/react/dist/ssr'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
@@ -62,7 +63,7 @@ export const NewChatPage = () => {
             control={form.control}
             name="content"
             render={({ field }) => (
-              <div className="chat-input-wrapper flex items-end gap-2">
+              <div className="chat-input-wrapper flex items-center gap-2">
                 <TextareaAutosize
                   {...field}
                   rows={1}
@@ -74,19 +75,19 @@ export const NewChatPage = () => {
                     }
                   }}
                   placeholder="Message..."
-                  className="flex-1 resize-none bg-transparent px-3 py-2.5 text-base outline-none placeholder:text-muted-foreground/60"
+                  className="flex-1 resize-none bg-transparent p-0! text-base outline-none placeholder:text-muted-foreground/60"
                 />
-                <button
+                <Button
                   type="submit"
+                  size="icon"
                   disabled={mutation.isPending || !field.value.trim()}
-                  className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-colors hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                   {mutation.isPending ? (
                     <CircleNotchIcon className="size-4 animate-spin" />
                   ) : (
                     <ArrowUpIcon className="size-4" />
                   )}
-                </button>
+                </Button>
               </div>
             )}
           />

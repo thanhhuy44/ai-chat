@@ -3,11 +3,12 @@ import { protectedProcedure } from '../init'
 import type { TRPCRouterRecord } from '@trpc/server'
 
 import { TRPCError } from '@trpc/server'
-import { db } from '#/db'
-import { conversation, message } from '#/db/schema'
+import { db } from '@/db'
+import { conversation, message } from '@/db/schema'
 import { and, eq } from 'drizzle-orm'
 import z from 'zod'
-import { aiClient } from '#/lib/ai'
+import { aiClient } from '@/lib/ai'
+import { SYSTEM_PROMPT } from '@/constants/system_promt'
 
 // Track per-generation AbortControllers so cancelGeneration can abort them
 const generationControllers = new Map<string, AbortController>()
@@ -117,9 +118,9 @@ async function* generateAIResponse(
     const stream = await aiClient.chat.completions.create({
       model,
       messages: [
-        { role: 'system', content: 'You are a helpful assistant.' },
+        { role: 'system', content: SYSTEM_PROMPT },
         ...msgs.map((m) => ({
-          role: m.role === 'user' ? 'user' as const : 'assistant' as const,
+          role: m.role === 'user' ? ('user' as const) : ('assistant' as const),
           content: m.content,
         })),
       ],
@@ -268,7 +269,10 @@ export const messageRouter = {
 
       const genController = new AbortController()
       generationControllers.set(conversationId, genController)
-      const combinedSignal = combineAbortSignals(aliveSignal, genController.signal)
+      const combinedSignal = combineAbortSignals(
+        aliveSignal,
+        genController.signal,
+      )
 
       try {
         for await (const event of generateAIResponse(

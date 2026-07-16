@@ -1,4 +1,5 @@
-import { ArrowClockwiseIcon } from '@phosphor-icons/react/dist/ssr'
+import { AiMessage } from '@/components/ai-message'
+import { AiMessageActions } from './actions'
 
 interface MessageItem {
   id: string
@@ -10,17 +11,17 @@ interface MessageItem {
 interface MessageListProps {
   items: MessageItem[]
   streamingMessage: string
-  onRetry: (messageId: string) => void
+  isStreaming: boolean
   onRegenerate: (messageId: string) => void
 }
 
 export const MessageList = ({
   items,
   streamingMessage,
-  onRetry,
+  isStreaming,
   onRegenerate,
 }: MessageListProps) => {
-  if (items.length === 0 && !streamingMessage) {
+  if (items.length === 0 && !isStreaming && !streamingMessage) {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
         <div className="rounded-full bg-muted p-4">
@@ -40,46 +41,39 @@ export const MessageList = ({
     <div className="flex flex-col gap-4">
       {items.map((msg) => (
         <div key={msg.id}>
-          <div
-            className={
-              msg.role === 'user' ? 'chat-message-user' : 'chat-message-ai'
-            }
-          >
-            <div className="whitespace-pre-wrap text-sm leading-relaxed">
-              {msg.content}
-            </div>
+          <div className={msg.role === 'user' ? 'chat-message-user' : 'chat-message-ai'}>
+            {msg.role === 'user' ? (
+              <div className="whitespace-pre-wrap text-sm leading-relaxed">
+                {msg.content}
+              </div>
+            ) : (
+              <AiMessage content={msg.content} />
+            )}
           </div>
           {/* Action buttons for AI messages */}
-          {msg.role === 'ai' && msg.status === 'failed' && (
-            <button
-              type="button"
-              onClick={() => onRetry(msg.id)}
-              className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
-              title="Retry"
-            >
-              <ArrowClockwiseIcon className="size-3.5" />
-              <span>Retry</span>
-            </button>
-          )}
-          {msg.role === 'ai' && msg.status === 'completed' && msg.content && (
-            <button
-              type="button"
-              onClick={() => onRegenerate(msg.id)}
-              className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
-              title="Regenerate"
-            >
-              <ArrowClockwiseIcon className="size-3.5" />
-              <span>Regenerate</span>
-            </button>
+          {msg.role === 'ai' && (
+            <AiMessageActions
+              messageId={msg.id}
+              content={msg.content}
+              status={msg.status}
+              onRegenerate={onRegenerate}
+            />
           )}
         </div>
       ))}
+      {isStreaming && !streamingMessage && (
+        <div className="chat-message-ai">
+          <div className="flex items-center gap-1.5 py-1">
+            <span className="inline-block size-1.5 animate-bounce rounded-full bg-muted-foreground/50 [animation-delay:0ms]" />
+            <span className="inline-block size-1.5 animate-bounce rounded-full bg-muted-foreground/50 [animation-delay:150ms]" />
+            <span className="inline-block size-1.5 animate-bounce rounded-full bg-muted-foreground/50 [animation-delay:300ms]" />
+          </div>
+        </div>
+      )}
       {streamingMessage && (
         <div className="chat-message-ai">
-          <div className="whitespace-pre-wrap text-sm leading-relaxed">
-            {streamingMessage}
-            <span className="ml-0.5 inline-block size-2 animate-pulse rounded-full bg-primary align-middle" />
-          </div>
+          <AiMessage content={streamingMessage} />
+          <span className="ml-0.5 inline-block size-2 animate-pulse rounded-full bg-primary align-middle" />
         </div>
       )}
     </div>

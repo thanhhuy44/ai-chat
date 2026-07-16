@@ -14,8 +14,8 @@ import {
 import { NavUser } from './nav-user'
 import { Link, useParams, useNavigate } from '@tanstack/react-router'
 import { useInfiniteQuery } from '@tanstack/react-query'
-import { useTRPC } from '#/trpc/react'
-import { flattenInfiniteData } from '#/lib/utils'
+import { useTRPC } from '@/trpc/react'
+import { flattenInfiniteData } from '@/lib/utils'
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const trpc = useTRPC()
@@ -46,10 +46,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader className="p-3">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton
-              size="lg"
-              className="group/sidebar-logo"
-            >
+            <SidebarMenuButton size="lg" className="group/sidebar-logo">
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                 <ChatCircleDotsIcon className="size-4" />
               </div>

@@ -1,8 +1,12 @@
-import { useAutoScroll } from '#/hooks/use-scroll'
-import { useStream } from '#/hooks/use-stream'
-import { useTRPC } from '#/trpc/react'
-import { flattenInfiniteData } from '#/lib/utils'
-import { useMutation, useQueryClient, useInfiniteQuery } from '@tanstack/react-query'
+import { useAutoScroll } from '@/hooks/use-scroll'
+import { useStream } from '@/hooks/use-stream'
+import { useTRPC } from '@/trpc/react'
+import { flattenInfiniteData } from '@/lib/utils'
+import {
+  useMutation,
+  useQueryClient,
+  useInfiniteQuery,
+} from '@tanstack/react-query'
 import { useParams } from '@tanstack/react-router'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { ChatInput } from './input'
@@ -33,7 +37,7 @@ export const ChatContainer = () => {
   )
 
   const items = useMemo(
-    () => (flattenInfiniteData(messages.data) as MessageItem[]),
+    () => flattenInfiniteData(messages.data) as MessageItem[],
     [messages.data],
   )
 
@@ -84,20 +88,7 @@ export const ChatContainer = () => {
     },
   })
 
-  // ── Retry / Regenerate ──────────────────────────────────────────────
-  const retryMessage = useMutation({
-    ...trpc.messages.retryMessage.mutationOptions(),
-    onSuccess: (response) => {
-      setActiveAiMessageId(response.aiMessageId)
-      queryClient.invalidateQueries({
-        queryKey: trpc.conversations.getMessages.infiniteQueryKey({
-          id,
-          cursor: null,
-        }),
-      })
-    },
-  })
-
+  // ── Regenerate ──────────────────────────────────────────────────────
   const regenerate = useMutation({
     ...trpc.messages.regenerate.mutationOptions(),
     onSuccess: (response) => {
@@ -118,13 +109,6 @@ export const ChatContainer = () => {
     [id, sendMessage.mutate],
   )
 
-  const onRetry = useCallback(
-    (messageId: string) => {
-      retryMessage.mutate({ conversationId: id, messageId })
-    },
-    [id, retryMessage.mutate],
-  )
-
   const onRegenerate = useCallback(
     (messageId: string) => {
       regenerate.mutate({ conversationId: id, messageId })
@@ -132,7 +116,10 @@ export const ChatContainer = () => {
     [id, regenerate.mutate],
   )
 
-  const { scrollRef, bottomRef, handleScroll } = useAutoScroll(items)
+  const { scrollRef, bottomRef, handleScroll } = useAutoScroll([
+    items,
+    streamingMessage,
+  ])
 
   return (
     <div className="flex h-dvh flex-col">
@@ -146,7 +133,7 @@ export const ChatContainer = () => {
           <MessageList
             items={items}
             streamingMessage={streamingMessage}
-            onRetry={onRetry}
+            isStreaming={isStreaming}
             onRegenerate={onRegenerate}
           />
           <div ref={bottomRef} />
@@ -156,10 +143,7 @@ export const ChatContainer = () => {
       {/* Input at bottom */}
       <div className="shrink-0 border-t border-border/50 bg-background">
         <div className="mx-auto max-w-3xl px-4 py-3">
-          <ChatInput
-            isStreaming={isStreaming}
-            onSubmit={onSend}
-          />
+          <ChatInput isStreaming={isStreaming} onSubmit={onSend} />
         </div>
       </div>
     </div>

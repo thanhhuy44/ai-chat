@@ -12,9 +12,9 @@ import appCss from '../styles.css?url'
 
 import type { QueryClient } from '@tanstack/react-query'
 
-import type { TRPCRouter } from '#/trpc/router'
+import type { TRPCRouter } from '@/trpc/router'
 import type { TRPCOptionsProxy } from '@trpc/tanstack-react-query'
-import { TooltipProvider } from '#/components/ui/tooltip'
+import { TooltipProvider } from '@/components/ui/tooltip'
 
 interface MyRouterContext {
   queryClient: QueryClient

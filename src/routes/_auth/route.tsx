@@ -1,6 +1,6 @@
-import { AppSidebar } from '#/components/layout/app-sidebar'
-import { SidebarInset, SidebarProvider } from '#/components/ui/sidebar'
-import { getSession } from '#/lib/auth.functions'
+import { AppSidebar } from '@/components/layout/app-sidebar'
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
+import { getSession } from '@/lib/auth.functions'
 import { createFileRoute, Outlet, redirect } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/_auth')({

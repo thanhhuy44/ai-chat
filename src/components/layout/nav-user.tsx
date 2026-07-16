@@ -1,5 +1,5 @@
-import { authClient } from '#/lib/auth-client'
-import { getFallbackName } from '#/lib/utils'
+import { authClient } from '@/lib/auth-client'
+import { getFallbackName } from '@/lib/utils'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import {
   DropdownMenu,

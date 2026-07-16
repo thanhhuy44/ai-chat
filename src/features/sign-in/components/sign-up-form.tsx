@@ -15,7 +15,7 @@ import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useMutation } from '@tanstack/react-query'
 import { GithubLogoIcon, GoogleLogoIcon } from '@phosphor-icons/react/dist/ssr'
-import { authClient } from '#/lib/auth-client'
+import { authClient } from '@/lib/auth-client'
 import { toast } from 'sonner'
 
 const signUpSchema = z.object({

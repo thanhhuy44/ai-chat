@@ -1,4 +1,4 @@
-import { useTRPC } from '#/trpc/react'
+import { useTRPC } from '@/trpc/react'
 import { useQueryClient } from '@tanstack/react-query'
 import { useSubscription } from '@trpc/tanstack-react-query'
 import { useState, useEffect, useRef } from 'react'

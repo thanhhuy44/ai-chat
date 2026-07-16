@@ -1,12 +1,10 @@
-import {
-  ArrowUpIcon,
-  PauseIcon,
-} from '@phosphor-icons/react/dist/ssr'
-import { useTRPC } from '#/trpc/react'
+import { ArrowUpIcon, PauseIcon } from '@phosphor-icons/react/dist/ssr'
+import { useTRPC } from '@/trpc/react'
 import { useMutation } from '@tanstack/react-query'
 import { useParams } from '@tanstack/react-router'
 import { useCallback, useState } from 'react'
 import TextareaAutosize from 'react-textarea-autosize'
+import { Button } from '@/components/ui/button'
 
 interface ChatInputProps {
   isStreaming: boolean
@@ -27,6 +25,7 @@ export const ChatInput = ({ isStreaming, onSubmit }: ChatInputProps) => {
   const handleSubmit = useCallback(() => {
     const content = text.trim()
     if (!content || isStreaming) return
+    setText('')
     onSubmit(content)
   }, [text, isStreaming, onSubmit])
 
@@ -45,7 +44,7 @@ export const ChatInput = ({ isStreaming, onSubmit }: ChatInputProps) => {
   }, [id, cancelGeneration.mutate])
 
   return (
-    <div className="chat-input-wrapper flex items-end gap-2">
+    <div className="chat-input-wrapper flex items-center gap-2">
       <TextareaAutosize
         rows={1}
         maxRows={6}
@@ -53,29 +52,28 @@ export const ChatInput = ({ isStreaming, onSubmit }: ChatInputProps) => {
         value={text}
         onChange={(e) => setText(e.target.value)}
         disabled={isStreaming}
-        placeholder={
-          isStreaming ? 'Waiting for response...' : 'Message...'
-        }
+        placeholder={isStreaming ? 'Waiting for response...' : 'Message...'}
         className="flex-1 resize-none bg-transparent px-3 py-2.5 text-base outline-none placeholder:text-muted-foreground/60 disabled:opacity-50"
       />
       {isStreaming ? (
-        <button
+        <Button
           type="button"
+          size="icon"
+          variant="destructive"
           onClick={handleStop}
-          className="flex size-9 shrink-0 items-center justify-center rounded-full bg-destructive text-destructive-foreground transition-colors hover:bg-destructive/90"
           title="Stop generation"
         >
           <PauseIcon className="size-4" />
-        </button>
+        </Button>
       ) : (
-        <button
+        <Button
           type="button"
-          onClick={handleSubmit}
+          size="icon"
           disabled={!text.trim()}
-          className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-colors hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed"
+          onClick={handleSubmit}
         >
           <ArrowUpIcon className="size-4" />
-        </button>
+        </Button>
       )}
     </div>
   )
