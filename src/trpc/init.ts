@@ -4,6 +4,15 @@ import type { Context } from './context'
 
 const t = initTRPC.context<Context>().create({
   transformer: superjson,
+  sse: {
+    ping: {
+      enabled: true,
+      intervalMs: 2000,
+    },
+    client: {
+      reconnectAfterInactivityMs: 5000,
+    },
+  },
 })
 
 const isAuthed = t.middleware(async ({ ctx, next }) => {

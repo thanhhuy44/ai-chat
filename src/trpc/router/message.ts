@@ -5,18 +5,14 @@ import type { TRPCRouterRecord } from '@trpc/server'
 import { TRPCError } from '@trpc/server'
 import { db } from '#/db'
 import { conversation, message } from '#/db/schema'
-import { eq } from 'drizzle-orm'
+import { and, eq } from 'drizzle-orm'
 import z from 'zod'
 import { aiClient } from '#/lib/ai'
-import EventEmitter, { on } from 'node:events'
 
-// Per-conversation events: server triggers AI generation after user sends a message
-const ee = new EventEmitter()
+// Track per-generation AbortControllers so cancelGeneration can abort them
+const generationControllers = new Map<string, AbortController>()
 
-// Tracks active AI generation per conversation — only one at a time
-const activeControllers = new Map<string, AbortController>()
-
-// Makes a fresh processor per AI generation (avoids cross-generation state leaks)
+// ─── Chunk processor (filters <thought> tags) ──────────────────────────
 const createChunkProcessor = () => {
   let isThinking = false
   let buffer = ''
@@ -69,83 +65,122 @@ const createChunkProcessor = () => {
   }
 }
 
-const getLastMessages = async (conversationId: string) => {
+// ─── Helpers ───────────────────────────────────────────────────────────
+
+const getCompletedMessages = async (conversationId: string) => {
   return db
     .select()
     .from(message)
-    .where(eq(message.conversationId, conversationId))
+    .where(
+      and(
+        eq(message.conversationId, conversationId),
+        eq(message.status, 'completed'),
+      ),
+    )
     .orderBy(message.createdAt)
 }
 
-// Returns true if there was a pending user message to respond to
-// Yields streaming chunks and the final completed message
+function combineAbortSignals(
+  ...signals: (AbortSignal | undefined)[]
+): AbortSignal {
+  const validSignals = signals.filter((s): s is AbortSignal => s !== undefined)
+  if (validSignals.length === 0) return new AbortController().signal
+  if (validSignals.length === 1) return validSignals[0]
+
+  const controller = new AbortController()
+  for (const signal of validSignals) {
+    if (signal.aborted) {
+      controller.abort()
+      return controller.signal
+    }
+    signal.addEventListener('abort', () => controller.abort(), { once: true })
+  }
+  return controller.signal
+}
+
+// ─── AI generation (shared by streamMessage, retry, regenerate) ────────
+
 async function* generateAIResponse(
   conversationId: string,
-  signal?: AbortSignal,
+  aiMessageId: string,
+  signal: AbortSignal,
 ) {
-  const msgs = await getLastMessages(conversationId)
+  const msgs = await getCompletedMessages(conversationId)
   const lastMessage = msgs.at(-1)
 
-  // Only generate if the last message is from the user (no AI response yet)
   if (!lastMessage || lastMessage.role !== 'user') {
     return false
   }
 
   try {
+    const model = process.env.OPENAI_MODEL!
     const stream = await aiClient.chat.completions.create({
-      model: process.env.OPENAI_MODEL!,
+      model,
       messages: [
-        {
-          role: 'system',
-          content: 'You are a helpful assistant.',
-        },
-        ...(msgs.map((m) => ({
-          role: m.role === 'user' ? 'user' : 'assistant',
+        { role: 'system', content: 'You are a helpful assistant.' },
+        ...msgs.map((m) => ({
+          role: m.role === 'user' ? 'user' as const : 'assistant' as const,
           content: m.content,
-        })) as any),
+        })),
       ],
       stream: true,
     })
 
     const processChunk = createChunkProcessor()
     let content = ''
-    for await (const event of stream) {
-      if (signal?.aborted) {
-        break
-      }
-      const delta = event.choices[0]?.delta?.content ?? ''
+
+    for await (const chunk of stream) {
+      if (signal.aborted) break
+      const delta = chunk.choices[0]?.delta?.content ?? ''
       content += processChunk(delta)
-      yield { content, status: 'streaming' as const }
-      // trigger: pass the yield value upward via delegation
+
+      await db
+        .update(message)
+        .set({ content })
+        .where(eq(message.id, aiMessageId))
+
+      yield { status: 'streaming' as const, content, data: null }
     }
 
-    if (signal?.aborted) return false
+    if (signal.aborted) {
+      await db
+        .update(message)
+        .set({ status: 'failed', content })
+        .where(eq(message.id, aiMessageId))
+      yield { status: 'error' as const, content, data: null }
+      return false
+    }
 
-    const [aiMessage] = await db
-      .insert(message)
-      .values({
-        conversationId,
-        role: 'ai',
-        content,
-      })
+    // Mark complete
+    const [aiMsg] = await db
+      .update(message)
+      .set({ content, status: 'completed', model })
+      .where(eq(message.id, aiMessageId))
       .returning()
 
-    yield {
-      content,
-      status: 'completed' as const,
-      data: aiMessage,
-    }
+    // Touch conversation updatedAt
+    await db
+      .update(conversation)
+      .set({ updatedAt: new Date() })
+      .where(eq(conversation.id, conversationId))
+
+    yield { status: 'completed' as const, content, data: aiMsg }
     return true
   } catch (error) {
-    console.error('🚀 ~ AI generation error:', error)
-    throw new TRPCError({
-      code: 'INTERNAL_SERVER_ERROR',
-      message: 'AI generation failed',
-    })
+    console.error('AI generation error:', error)
+    await db
+      .update(message)
+      .set({ status: 'failed' })
+      .where(eq(message.id, aiMessageId))
+    yield { status: 'error' as const, content: '', data: null }
+    return false
   }
 }
 
+// ─── Router ────────────────────────────────────────────────────────────
+
 export const messageRouter = {
+  /** Send a user message, create an AI placeholder, return the IDs. */
   send: protectedProcedure
     .input(
       z.object({
@@ -154,46 +189,148 @@ export const messageRouter = {
       }),
     )
     .mutation(async ({ ctx, input }) => {
-      // let existConversation: { id: string }[] | undefined
-      const { conversationId = undefined, content } = input
-
+      const { conversationId, content } = input
       const user = ctx.user
-      const existConversation = conversationId
+
+      // Find or create conversation
+      const conv = conversationId
         ? await db
             .select()
             .from(conversation)
             .where(eq(conversation.id, conversationId))
-        : await db
-            .insert(conversation)
-            .values({
-              createdBy: user.id,
-              title: content,
-            })
-            .returning()
-      if (!existConversation.length) {
-        throw new TRPCError({
-          code: 'NOT_FOUND',
-        })
+            .then((rows) => rows[0] ?? null)
+        : null
+
+      const resolvedConv =
+        conv ??
+        (await db
+          .insert(conversation)
+          .values({ createdBy: user.id, title: content })
+          .returning()
+          .then((rows) => rows[0]))
+
+      if (!resolvedConv) {
+        throw new TRPCError({ code: 'NOT_FOUND' })
       }
 
-      const newMessage = await db
+      // Insert user message
+      const [userMsg] = await db
         .insert(message)
         .values({
           content,
-          conversationId: existConversation[0].id,
+          conversationId: resolvedConv.id,
           role: 'user',
+          status: 'completed',
         })
         .returning()
 
-      // Abort any in-flight AI generation for this conversation
-      const prevController = activeControllers.get(existConversation[0].id)
-      if (prevController && !prevController.signal.aborted) {
-        prevController.abort()
+      // Insert AI placeholder
+      const [aiPlaceholder] = await db
+        .insert(message)
+        .values({
+          content: '',
+          conversationId: resolvedConv.id,
+          role: 'ai',
+          status: 'streaming',
+        })
+        .returning()
+
+      // Abort any in-flight generation for this conversation
+      const prev = generationControllers.get(resolvedConv.id)
+      if (prev && !prev.signal.aborted) prev.abort()
+
+      return {
+        userMessage: userMsg,
+        conversationId: resolvedConv.id,
+        aiMessageId: aiPlaceholder.id,
+      }
+    }),
+
+  /** Stream a single AI generation for a given placeholder message. */
+  streamMessage: protectedProcedure
+    .input(
+      z.object({
+        conversationId: z.string(),
+        aiMessageId: z.string(),
+      }),
+    )
+    .subscription(async function* ({ input, signal }) {
+      const { conversationId, aiMessageId } = input
+      const aliveSignal = signal ?? new AbortController().signal
+
+      // Yield connected immediately
+      yield {
+        type: 'connected' as const,
+        status: 'connected' as const,
+        content: '',
+        data: null,
       }
 
-      // Notify the subscription to start/resume AI generation
-      ee.emit(existConversation[0].id)
+      const genController = new AbortController()
+      generationControllers.set(conversationId, genController)
+      const combinedSignal = combineAbortSignals(aliveSignal, genController.signal)
 
-      return { ...newMessage[0], conversationId: existConversation[0].id }
+      try {
+        for await (const event of generateAIResponse(
+          conversationId,
+          aiMessageId,
+          combinedSignal,
+        )) {
+          yield event
+        }
+      } finally {
+        generationControllers.delete(conversationId)
+      }
+    }),
+
+  /** Cancel the current generation for a conversation. */
+  cancelGeneration: protectedProcedure
+    .input(z.object({ conversationId: z.string() }))
+    .mutation(async ({ input }) => {
+      const controller = generationControllers.get(input.conversationId)
+      if (controller && !controller.signal.aborted) {
+        controller.abort()
+      }
+      return { success: true }
+    }),
+
+  /** Reset a failed message to streaming and return its ID for a new subscription. */
+  retryMessage: protectedProcedure
+    .input(
+      z.object({
+        conversationId: z.string(),
+        messageId: z.string(),
+      }),
+    )
+    .mutation(async ({ input }) => {
+      await db
+        .update(message)
+        .set({ status: 'streaming', content: '' })
+        .where(eq(message.id, input.messageId))
+
+      const prev = generationControllers.get(input.conversationId)
+      if (prev && !prev.signal.aborted) prev.abort()
+
+      return { aiMessageId: input.messageId }
+    }),
+
+  /** Reset a completed AI message to streaming and return its ID for a new subscription. */
+  regenerate: protectedProcedure
+    .input(
+      z.object({
+        conversationId: z.string(),
+        messageId: z.string(),
+      }),
+    )
+    .mutation(async ({ input }) => {
+      await db
+        .update(message)
+        .set({ status: 'streaming', content: '' })
+        .where(eq(message.id, input.messageId))
+
+      const prev = generationControllers.get(input.conversationId)
+      if (prev && !prev.signal.aborted) prev.abort()
+
+      return { aiMessageId: input.messageId }
     }),
 } satisfies TRPCRouterRecord

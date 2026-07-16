@@ -8,7 +8,7 @@ import {
   serial,
   uuid,
 } from 'drizzle-orm/pg-core'
-import { messageRoleEnum } from './enum'
+import { messageRoleEnum, messageStatusEnum } from './enum'
 
 export const todos = pgTable('todos', {
   id: serial().primaryKey(),
@@ -126,6 +126,8 @@ export const message = pgTable('message', {
     .references(() => conversation.id, { onDelete: 'cascade' }),
   content: text('content').notNull(),
   role: messageRoleEnum('role').default('user').notNull(),
+  status: messageStatusEnum('status').default('completed').notNull(),
+  model: text('model'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at')
     .$onUpdate(() => /* @__PURE__ */ new Date())
