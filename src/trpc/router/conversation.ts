@@ -68,6 +68,26 @@ export const conversationRouter = {
         })
       return updatedConversations[0]
     }),
+  delete: protectedProcedure
+    .input(z.object({ id: z.uuid() }))
+    .mutation(async ({ ctx, input }) => {
+      // Verify ownership before deleting
+      const conv = await db
+        .select({ id: conversation.id })
+        .from(conversation)
+        .where(
+          and(eq(conversation.id, input.id), eq(conversation.createdBy, ctx.user.id)),
+        )
+        .limit(1)
+
+      if (!conv.length) {
+        throw new TRPCError({ code: 'NOT_FOUND' })
+      }
+
+      // Messages cascade-delete via FK
+      await db.delete(conversation).where(eq(conversation.id, input.id))
+      return { success: true }
+    }),
   getMessages: protectedProcedure
     .input(
       z.object({
