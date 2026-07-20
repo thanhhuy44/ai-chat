@@ -39,8 +39,8 @@
 
 | Priority | Feature | Effort | Why |
 |----------|---------|--------|-----|
-| P0 | **Delete conversation** 🗑️ | Small | `conversations.delete` mutation + sidebar context menu (DropdownMenu on each item) — table-stakes UX |
-| P0 | **Rename conversation** ✏️ | Small | `conversations.update` mutation exists, just needs an inline-edit or dialog in sidebar |
+| P0 | **Delete conversation** 🗑️ | ✅ Done | `conversations.delete` mutation + sidebar DropdownMenu with AlertDialog confirmation |
+| P0 | **Rename conversation** ✏️ | ✅ Done | `conversations.update` mutation + sidebar DropdownMenu with Dialog inline edit |
 | P1 | **Model selector** 🤖 | Medium | Dropdown to switch `OPENAI_MODEL` per conversation; store `model` on conversation or message |
 | P1 | **Dark/light mode toggle** 🌓 | Small | Toggle button in sidebar footer or nav-user dropdown; persist preference |
 | P1 | **Loading skeleton** | Small | Replace plain "Loading..." text with skeleton placeholders for messages and sidebar |

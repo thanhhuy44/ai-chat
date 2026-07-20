@@ -125,6 +125,7 @@ async function* generateAIResponse(
         })),
       ],
       stream: true,
+      tools: [],
     })
 
     const processChunk = createChunkProcessor()

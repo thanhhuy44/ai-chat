@@ -46,6 +46,11 @@ export const ChatContainer = () => {
     null,
   )
 
+  // Reset when navigating to a different conversation
+  useEffect(() => {
+    setActiveAiMessageId(null)
+  }, [id])
+
   // Resume any pending streaming AI message from loaded items
   // (e.g. when navigating from NewChatPage after sending a message)
   useEffect(() => {

@@ -42,7 +42,7 @@ export const useStream = (
       setStreamingContent('')
       setIsStreaming(false)
     }
-  }, [aiMessageId])
+  }, [aiMessageId, conversationId])
 
   const enabled = !!aiMessageId
 
