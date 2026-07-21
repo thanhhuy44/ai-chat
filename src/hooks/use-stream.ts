@@ -11,7 +11,6 @@ interface StreamEvent {
     content: string
     role: string
     status: string
-    model: string | null
     createdAt: Date
     updatedAt: Date
     conversationId: string
@@ -24,6 +23,7 @@ interface StreamEvent {
  */
 export const useStream = (
   conversationId: string,
+  modelId: string,
   aiMessageId: string | null,
   onComplete?: () => void,
 ) => {
@@ -48,7 +48,7 @@ export const useStream = (
 
   useSubscription(
     trpc.messages.streamMessage.subscriptionOptions(
-      { conversationId, aiMessageId: aiMessageId ?? '' },
+      { conversationId, aiMessageId: aiMessageId ?? '', modelId },
       {
         enabled,
         onData: (event: StreamEvent) => {

@@ -16,17 +16,17 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from '@/components/ui/sidebar'
-import {
-  BellIcon,
-  CircleNotchIcon,
-  CreditCardIcon,
-  CaretRightIcon,
-  SignOutIcon,
-  UserCircleIcon,
-} from '@phosphor-icons/react/dist/ssr'
 import { useMutation } from '@tanstack/react-query'
 import { useNavigate } from '@tanstack/react-router'
 import { toast } from 'sonner'
+import {
+  BellIcon,
+  ChevronRight,
+  CircleUserRound,
+  CreditCard,
+  Loader2,
+  LogOut,
+} from 'lucide-react'
 
 export function NavUser() {
   const { isMobile } = useSidebar()
@@ -72,7 +72,7 @@ export function NavUser() {
                   {user.email}
                 </span>
               </div>
-              <CaretRightIcon className="mx-auto size-3" />
+              <ChevronRight className="mx-auto size-3" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -99,11 +99,11 @@ export function NavUser() {
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
-                <UserCircleIcon />
+                <CircleUserRound />
                 Account
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <CreditCardIcon />
+                <CreditCard />
                 Billing
               </DropdownMenuItem>
               <DropdownMenuItem>
@@ -116,7 +116,11 @@ export function NavUser() {
               disabled={signOut.isPending}
               onClick={() => signOut.mutate()}
             >
-              {signOut.isPending ? <CircleNotchIcon /> : <SignOutIcon />}
+              {signOut.isPending ? (
+                <Loader2 className="animate-spin" />
+              ) : (
+                <LogOut />
+              )}
               Log out
             </DropdownMenuItem>
           </DropdownMenuContent>

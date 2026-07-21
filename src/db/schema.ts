@@ -5,16 +5,9 @@ import {
   timestamp,
   boolean,
   index,
-  serial,
   uuid,
 } from 'drizzle-orm/pg-core'
-import { messageRoleEnum, messageStatusEnum } from './enum'
-
-export const todos = pgTable('todos', {
-  id: serial().primaryKey(),
-  title: text().notNull(),
-  createdAt: timestamp('created_at').defaultNow(),
-})
+import { messageRoleEnum, messageStatusEnum, tierEnum } from './enum'
 
 export const user = pgTable('user', {
   id: text('id').primaryKey(),
@@ -127,9 +120,9 @@ export const message = pgTable('message', {
   content: text('content').notNull(),
   role: messageRoleEnum('role').default('user').notNull(),
   status: messageStatusEnum('status').default('completed').notNull(),
-  model: text('model'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at')
+    .defaultNow()
     .$onUpdate(() => /* @__PURE__ */ new Date())
     .notNull(),
 })
@@ -144,3 +137,15 @@ export const conversationRelations = relations(
     messages: many(message),
   }),
 )
+
+export const model = pgTable('model', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: text('name').notNull().unique(),
+  sys_prompt: text('sys_prompt').notNull(),
+  tier: tierEnum('tier').default('free').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at')
+    .defaultNow()
+    .$onUpdate(() => /* @__PURE__ */ new Date())
+    .notNull(),
+})

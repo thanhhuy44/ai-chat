@@ -4,11 +4,10 @@ import type { TRPCRouterRecord } from '@trpc/server'
 
 import { TRPCError } from '@trpc/server'
 import { db } from '@/db'
-import { conversation, message } from '@/db/schema'
+import { conversation, message, model as modelDB } from '@/db/schema'
 import { and, eq } from 'drizzle-orm'
 import z from 'zod'
 import { aiClient } from '@/lib/ai'
-import { SYSTEM_PROMPT } from '@/constants/system_promt'
 
 // Track per-generation AbortControllers so cancelGeneration can abort them
 const generationControllers = new Map<string, AbortController>()
@@ -105,6 +104,7 @@ async function* generateAIResponse(
   conversationId: string,
   aiMessageId: string,
   signal: AbortSignal,
+  modelId: string,
 ) {
   const msgs = await getCompletedMessages(conversationId)
   const lastMessage = msgs.at(-1)
@@ -113,12 +113,20 @@ async function* generateAIResponse(
     return false
   }
 
+  const model = await db.select().from(modelDB).where(eq(modelDB.id, modelId))
+
+  if (!model.length) {
+    throw new TRPCError({
+      code: 'NOT_FOUND',
+      message: 'Model not found',
+    })
+  }
+
   try {
-    const model = process.env.OPENAI_MODEL!
     const stream = await aiClient.chat.completions.create({
-      model,
+      model: process.env.OPENAI_MODEL!,
       messages: [
-        { role: 'system', content: SYSTEM_PROMPT },
+        { role: 'system', content: model[0].sys_prompt },
         ...msgs.map((m) => ({
           role: m.role === 'user' ? ('user' as const) : ('assistant' as const),
           content: m.content,
@@ -156,7 +164,7 @@ async function* generateAIResponse(
     // Mark complete
     const [aiMsg] = await db
       .update(message)
-      .set({ content, status: 'completed', model })
+      .set({ content, status: 'completed' })
       .where(eq(message.id, aiMessageId))
       .returning()
 
@@ -188,10 +196,11 @@ export const messageRouter = {
       z.object({
         conversationId: z.string().optional(),
         content: z.string(),
+        model: z.uuid(),
       }),
     )
     .mutation(async ({ ctx, input }) => {
-      const { conversationId, content } = input
+      const { conversationId, content, model } = input
       const user = ctx.user
 
       // Find or create conversation
@@ -207,7 +216,10 @@ export const messageRouter = {
         conv ??
         (await db
           .insert(conversation)
-          .values({ createdBy: user.id, title: content })
+          .values({
+            createdBy: user.id,
+            title: content,
+          })
           .returning()
           .then((rows) => rows[0]))
 
@@ -254,10 +266,11 @@ export const messageRouter = {
       z.object({
         conversationId: z.string(),
         aiMessageId: z.string(),
+        modelId: z.string(),
       }),
     )
     .subscription(async function* ({ input, signal }) {
-      const { conversationId, aiMessageId } = input
+      const { conversationId, aiMessageId, modelId } = input
       const aliveSignal = signal ?? new AbortController().signal
 
       // Yield connected immediately
@@ -280,6 +293,7 @@ export const messageRouter = {
           conversationId,
           aiMessageId,
           combinedSignal,
+          modelId,
         )) {
           yield event
         }
@@ -325,6 +339,7 @@ export const messageRouter = {
       z.object({
         conversationId: z.string(),
         messageId: z.string(),
+        model: z.uuid().optional(),
       }),
     )
     .mutation(async ({ input }) => {

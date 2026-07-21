@@ -52,14 +52,21 @@ export const conversationRouter = {
       })
     }),
   update: protectedProcedure
-    .input(z.object({ id: z.uuid(), title: z.string() }))
+    .input(
+      z.object({
+        id: z.uuid(),
+        title: z.string().optional(),
+        model: z.uuid().optional(),
+      }),
+    )
     .mutation(async ({ input }) => {
-      const { title, id } = input
+      const { id, ...updates } = input
+      const setFields: Record<string, unknown> = {}
+      if (updates.title !== undefined) setFields.title = updates.title
+      if (updates.model !== undefined) setFields.model = updates.model
       const updatedConversations = await db
         .update(conversation)
-        .set({
-          title,
-        })
+        .set(setFields)
         .where(eq(conversation.id, id))
         .returning()
       if (!updatedConversations.length)
@@ -76,7 +83,10 @@ export const conversationRouter = {
         .select({ id: conversation.id })
         .from(conversation)
         .where(
-          and(eq(conversation.id, input.id), eq(conversation.createdBy, ctx.user.id)),
+          and(
+            eq(conversation.id, input.id),
+            eq(conversation.createdBy, ctx.user.id),
+          ),
         )
         .limit(1)
 
@@ -116,5 +126,17 @@ export const conversationRouter = {
           cursor: items.at(-1)?.id ?? null,
         },
       }
+    }),
+  getById: protectedProcedure
+    .input(z.object({ id: z.uuid() }))
+    .query(async ({ input }) => {
+      const [conv] = await db
+        .select()
+        .from(conversation)
+        .where(eq(conversation.id, input.id))
+        .limit(1)
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+      if (!conv) throw new TRPCError({ code: 'NOT_FOUND' })
+      return conv
     }),
 } satisfies TRPCRouterRecord

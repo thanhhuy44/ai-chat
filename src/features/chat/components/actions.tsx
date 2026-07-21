@@ -1,4 +1,3 @@
-import { CopyIcon, ArrowClockwiseIcon } from '@phosphor-icons/react/dist/ssr'
 import { useCallback } from 'react'
 
 import { Button } from '@/components/ui/button'
@@ -8,6 +7,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
+import { Copy, RefreshCw, RotateCcw } from 'lucide-react'
 
 interface AiMessageActionsProps {
   messageId: string
@@ -43,7 +43,7 @@ export const AiMessageActions = ({
                 onClick={() => onRegenerate(messageId)}
                 aria-label="Retry"
               >
-                <ArrowClockwiseIcon className="size-3" />
+                <RefreshCw className="size-3" />
               </Button>
             </TooltipTrigger>
             <TooltipContent side="top">Retry</TooltipContent>
@@ -59,7 +59,7 @@ export const AiMessageActions = ({
                   onClick={() => onRegenerate(messageId)}
                   aria-label="Regenerate"
                 >
-                  <ArrowClockwiseIcon className="size-3" />
+                  <RotateCcw className="size-3" />
                 </Button>
               </TooltipTrigger>
               <TooltipContent side="top">Regenerate</TooltipContent>
@@ -73,7 +73,7 @@ export const AiMessageActions = ({
                   onClick={handleCopy}
                   aria-label="Copy"
                 >
-                  <CopyIcon className="size-3" />
+                  <Copy className="size-3" />
                 </Button>
               </TooltipTrigger>
               <TooltipContent side="top">Copy</TooltipContent>

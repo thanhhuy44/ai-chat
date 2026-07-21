@@ -6,11 +6,13 @@ import {
   useMutation,
   useQueryClient,
   useInfiniteQuery,
+  useQuery,
 } from '@tanstack/react-query'
 import { useParams } from '@tanstack/react-router'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { ChatInput } from './input'
 import { MessageList } from './message-list'
+import { ChatInput } from '@/components/chat-input'
+import { useModels } from '@/stores/model'
 
 interface MessageItem {
   id: string
@@ -23,8 +25,14 @@ export const ChatContainer = () => {
   const { id } = useParams({
     from: '/_auth/chat/$id/',
   })
+  const { model } = useModels()
   const trpc = useTRPC()
   const queryClient = useQueryClient()
+
+  // ── Conversation query (for model) ───────────────────────────────────
+  const conversationQuery = useQuery(
+    trpc.conversations.getById.queryOptions({ id }),
+  )
 
   // ── Messages query ──────────────────────────────────────────────────
   const messages = useInfiniteQuery(
@@ -69,29 +77,10 @@ export const ChatContainer = () => {
 
   const { message: streamingMessage, isStreaming } = useStream(
     id,
+    model!,
     activeAiMessageId,
     handleGenerationComplete,
   )
-
-  // ── Send message ────────────────────────────────────────────────────
-  const sendMessage = useMutation({
-    ...trpc.messages.send.mutationOptions(),
-    onSuccess: (response) => {
-      setActiveAiMessageId(response.aiMessageId)
-      queryClient.invalidateQueries({
-        queryKey: trpc.conversations.getAll.infiniteQueryKey(),
-      })
-      queryClient.invalidateQueries({
-        queryKey: trpc.conversations.getMessages.infiniteQueryKey({
-          id,
-          cursor: null,
-        }),
-      })
-    },
-    onError: (error) => {
-      console.error('Failed to send message:', error)
-    },
-  })
 
   // ── Regenerate ──────────────────────────────────────────────────────
   const regenerate = useMutation({
@@ -107,18 +96,15 @@ export const ChatContainer = () => {
     },
   })
 
-  const onSend = useCallback(
-    (content: string) => {
-      sendMessage.mutate({ conversationId: id, content })
-    },
-    [id, sendMessage.mutate],
-  )
-
   const onRegenerate = useCallback(
     (messageId: string) => {
-      regenerate.mutate({ conversationId: id, messageId })
+      regenerate.mutate({
+        conversationId: id,
+        messageId,
+        model,
+      })
     },
-    [id, regenerate.mutate],
+    [id, model, regenerate.mutate],
   )
 
   const { scrollRef, bottomRef, handleScroll } = useAutoScroll([
@@ -146,9 +132,9 @@ export const ChatContainer = () => {
       </div>
 
       {/* Input at bottom */}
-      <div className="shrink-0 border-t border-border/50 bg-background">
-        <div className="mx-auto max-w-3xl px-4 py-3">
-          <ChatInput isStreaming={isStreaming} onSubmit={onSend} />
+      <div className="">
+        <div className="mx-auto max-w-3xl px-4">
+          <ChatInput isStreaming={isStreaming} />
         </div>
       </div>
     </div>

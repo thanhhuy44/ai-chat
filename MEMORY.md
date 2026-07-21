@@ -41,7 +41,7 @@
 |----------|---------|--------|-----|
 | P0 | **Delete conversation** 🗑️ | ✅ Done | `conversations.delete` mutation + sidebar DropdownMenu with AlertDialog confirmation |
 | P0 | **Rename conversation** ✏️ | ✅ Done | `conversations.update` mutation + sidebar DropdownMenu with Dialog inline edit |
-| P1 | **Model selector** 🤖 | Medium | Dropdown to switch `OPENAI_MODEL` per conversation; store `model` on conversation or message |
+| P1 | **Model selector** 🤖 | ✅ Done | Per-conversation model dropdown in chat input; stores `model` on `conversation` table as `model_name` enum; selects system prompt per model from `constants/prompts.ts` |
 | P1 | **Dark/light mode toggle** 🌓 | Small | Toggle button in sidebar footer or nav-user dropdown; persist preference |
 | P1 | **Loading skeleton** | Small | Replace plain "Loading..." text with skeleton placeholders for messages and sidebar |
 | P2 | **Type-safe thought rendering** 💭 | Medium | Render `<thought>` content in a collapsible expandable block instead of stripping it |

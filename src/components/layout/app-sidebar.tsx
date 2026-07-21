@@ -1,12 +1,18 @@
 import * as React from 'react'
+
 import {
-  ChatCircleDotsIcon,
-  DotsThreeIcon,
-  PencilSimpleIcon,
-  PlusIcon,
-  TrashIcon,
-} from '@phosphor-icons/react/dist/ssr'
-import { useInfiniteQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+  Plus,
+  MessageCircleMore,
+  EllipsisVertical,
+  Pencil,
+  Trash2,
+} from 'lucide-react'
+
+import {
+  useInfiniteQuery,
+  useMutation,
+  useQueryClient,
+} from '@tanstack/react-query'
 import { Link, useNavigate, useParams } from '@tanstack/react-router'
 import { toast } from 'sonner'
 
@@ -66,9 +72,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     ),
   )
 
-  const conversations = React.useMemo(() => flattenInfiniteData(conversationsQuery.data), [
-    conversationsQuery.data,
-  ])
+  const conversations = React.useMemo(
+    () => flattenInfiniteData(conversationsQuery.data),
+    [conversationsQuery.data],
+  )
 
   const invalidateList = () => {
     queryClient.invalidateQueries({
@@ -128,7 +135,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" className="group/sidebar-logo">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                  <ChatCircleDotsIcon className="size-4" />
+                  <MessageCircleMore className="size-4" />
                 </div>
                 <div className="flex flex-1 items-center justify-between">
                   <span className="font-semibold text-sm">Filixer AI</span>
@@ -142,7 +149,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             onClick={() => navigate({ to: '/chat' })}
             className="mt-2 flex w-full items-center gap-2 rounded-lg border border-sidebar-border px-3 py-2 text-sm text-sidebar-foreground/70 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
           >
-            <PlusIcon className="size-4" />
+            <Plus className="size-4" />
             <span>New chat</span>
           </button>
         </SidebarHeader>
@@ -166,7 +173,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                         showOnHover
                         aria-label="Conversation actions"
                       >
-                        <DotsThreeIcon />
+                        <EllipsisVertical />
                       </SidebarMenuAction>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent side="right" align="start">
@@ -176,7 +183,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                           setRenameTarget({ id: conv.id, title: conv.title })
                         }}
                       >
-                        <PencilSimpleIcon />
+                        <Pencil />
                         Rename
                       </DropdownMenuItem>
                       <DropdownMenuItem
@@ -185,7 +192,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                           setDeleteTarget({ id: conv.id, title: conv.title })
                         }
                       >
-                        <TrashIcon />
+                        <Trash2 />
                         Delete
                       </DropdownMenuItem>
                     </DropdownMenuContent>
